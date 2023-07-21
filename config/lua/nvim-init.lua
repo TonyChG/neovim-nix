@@ -2,6 +2,15 @@ require("nvim-autopairs").setup()
 require("glow").setup()
 require("registers").setup()
 
+local rt = require("rust-tools")
+
+rt.setup({
+    server = {
+        on_attach = require("lsp-format").on_attach,
+    },
+})
+
+
 vim.cmd.syntax("on")
 vim.cmd.colorscheme("monokai-pro")
 
@@ -46,4 +55,3 @@ vim.keymap.set("i", "<Tab>", "vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'   
 vim.keymap.set("s", "<Tab>", "vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab>'", { expr = true })
 vim.keymap.set("i", "<S-Tab>", "vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'", { expr = true })
 vim.keymap.set("s", "<S-Tab>", "vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'", { expr = true })
-

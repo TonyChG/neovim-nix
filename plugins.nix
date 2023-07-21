@@ -15,6 +15,8 @@ with pkgs.vimPlugins; [
   plenary-nvim
   sqlite-lua
   nvim-neoclip-lua
+  trouble-nvim
+  registers-nvim
 
   (nvim-treesitter.withPlugins (
     p: [
@@ -59,11 +61,11 @@ with pkgs.vimPlugins; [
   cmp-emoji
   lspsaga-nvim
   nvim-treesitter-context
+  lsp-format-nvim
   rust-tools-nvim
   lsp-status-nvim
   diffview-nvim
   null-ls-nvim
   lazygit-nvim
   telescope-recent-files
-  lsp-format-nvim
 ]

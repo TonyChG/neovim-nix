@@ -74,14 +74,6 @@
       })
   })
 
-  local rt = require("rust-tools")
-
-  rt.setup({
-      server = {
-          on_attach = require("lsp-format").on_attach,
-      },
-  })
-
   -- Set up lspconfig.
   local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
