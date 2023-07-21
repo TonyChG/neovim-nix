@@ -21,9 +21,10 @@ with pkgs; [
   rustfmt
   # packages with results in /lib/node_modules/.bin must come at the end
   pyright
-  nodePackages.vls
   nodePackages.dockerfile-language-server-nodejs
   nodePackages.bash-language-server
   nodePackages.prettier
+  nodePackages.typescript
+  nodePackages."@volar/vue-language-server"
 ]
 
