@@ -107,12 +107,17 @@
 
   require'lspconfig'.rnix.setup {
       capabilities = capabilities,
-      on_attach = require("lsp-format").on_attach
+      on_attach = require("lsp-format").on_attach,
   }
 
   require'lspconfig'.eslint.setup {
       capabilities = capabilities,
-      on_attach = require("lsp-format").on_attach
+      on_attach = require("lsp-format").on_attach,
+  }
+
+  require'lspconfig'.vuels.setup {
+      capabilities = capabilities,
+      on_attach = require("lsp-format").on_attach,
   }
 
   require'lspconfig'.yamlls.setup {
