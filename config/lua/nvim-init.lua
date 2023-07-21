@@ -1,6 +1,9 @@
 require("nvim-autopairs").setup()
 require("glow").setup()
 require("registers").setup()
+require("neodev").setup({
+    library = { plugins = { "nvim-dap-ui" }, types = true },
+})
 
 local rt = require("rust-tools")
 
@@ -8,10 +11,6 @@ rt.setup({
     server = {
         on_attach = require("lsp-format").on_attach,
     },
-})
-
-require("neodev").setup({
-    library = { plugins = { "nvim-dap-ui" }, types = true },
 })
 
 vim.cmd.syntax("on")
