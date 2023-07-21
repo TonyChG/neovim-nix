@@ -24,5 +24,6 @@ with pkgs; [
   nodePackages.vls
   nodePackages.dockerfile-language-server-nodejs
   nodePackages.bash-language-server
+  nodePackages.prettier
 ]
 
