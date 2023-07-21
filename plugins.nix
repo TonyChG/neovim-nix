@@ -71,4 +71,5 @@ with pkgs.vimPlugins; [
   telescope-recent-files
   nvim-dap
   nvim-dap-ui
+  neodev-nvim
 ]
