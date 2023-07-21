@@ -49,7 +49,7 @@ with pkgs.vimPlugins; [
       p.vue
     ]
   ))
-  copilot-lua
+  copilot-vim
   nvim-lspconfig
   lspkind-nvim
   nvim-cmp
