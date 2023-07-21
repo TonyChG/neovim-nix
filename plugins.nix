@@ -1,6 +1,7 @@
 { pkgs }:
 with pkgs.vimPlugins; [
   onedark-nvim
+  monokai-pro-nvim
   kommentary
   indent-blankline-nvim-lua
   nvim-autopairs
