@@ -1,10 +1,21 @@
 { pkgs }:
 with pkgs.vimPlugins; [
-  gruvbox-community
-  nvim-base16
-  harpoon
+  onedark-nvim
+  kommentary
+  indent-blankline-nvim-lua
+  nvim-autopairs
+  glow-nvim
+  gitsigns-nvim
+  nvim-web-devicons
+  toggleterm-nvim
   lualine-nvim
-  lush-nvim
+  lualine-lsp-progress
+  nvim-tree-lua
+  telescope-nvim
+  plenary-nvim
+  sqlite-lua
+  nvim-neoclip-lua
+
   (nvim-treesitter.withPlugins (
     p: [
       p.javascript
@@ -18,52 +29,41 @@ with pkgs.vimPlugins; [
       p.scss
       p.tsx
       p.rust
+      p.yaml
+      p.json
+      p.dockerfile
+      p.gomod
+      p.puppet
+      p.scss
+      p.sql
+      p.terraform
+      p.jsonnet
+      p.markdown
+      p.python
+      p.vim
+      p.vimdoc
+      p.php
+      p.vue
     ]
   ))
-  plenary-nvim
-  nui-nvim
-  popup-nvim
-  tabular
-  telescope-nvim
-  sqlite-lua
-  ultisnips
-  vim-nix
-  nvim-web-devicons
-  nvim-tree-lua
-  lspsaga-nvim
-  vim-abolish
-  vim-dirdiff
-  lsplens
-  indent-blankline-nvim
-  nvim-colorizer-lua
-  neogen
-  muren
-
-  nvim-navic
-  navbuddy
-
-  # Git
-  vim-fugitive
-  vim-gitgutter
-  diffview-nvim
-  lazygit-nvim
-  git-messenger-vim
-
-  # Commenting
-  vim-commentary
-  nvim-ts-context-commentstring
-
-  # Completition
+  copilot-lua
+  nvim-lspconfig
+  lspkind-nvim
   nvim-cmp
   cmp-nvim-lsp
   cmp-buffer
   cmp-path
+  cmp-vsnip
+  vim-vsnip
   cmp-cmdline
-  cmp-nvim-ultisnips
   cmp-emoji
-
-  nvim-lspconfig
+  lspsaga-nvim
+  nvim-treesitter-context
+  rust-tools-nvim
   lsp-status-nvim
+  diffview-nvim
   null-ls-nvim
+  lazygit-nvim
   telescope-recent-files
+  lsp-format-nvim
 ]

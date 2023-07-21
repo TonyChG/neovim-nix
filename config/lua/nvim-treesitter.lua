@@ -1,9 +1,37 @@
-require("nvim-treesitter.configs").setup({
-	highlight = {
-		enable = true,
-	},
+require('nvim-treesitter.configs').setup({
+    highlight = {
+        enable = true,
+        disable = {},
+    },
+    sync_install = true,
+    ensure_installed = {
+        "bash",
+        "dockerfile",
+        "go",
+        "gomod",
+        "vimdoc",
+        "vim",
+        "nix",
+        "html",
+        "json",
+        "jsonnet",
+        "terraform",
+        "make",
+        "markdown",
+        "vue",
+        "php",
+        "puppet",
+        "typescript",
+        "javascript",
+        "lua",
+        "latex",
+        "python",
+        "regex",
+        "ruby",
+        "rust",
+        "sql",
+        "scss",
+        "yaml",
+    },
 })
 
--- vim.api.nvim_set_option("foldmethod", "expr")
--- vim.api.nvim_set_option("foldexpr", "nvim_treesitter#foldexpr()")
-vim.api.nvim_set_option("foldenable", false)

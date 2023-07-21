@@ -33,54 +33,6 @@
         "type": "github"
       }
     },
-    "lsplens-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1689410007,
-        "narHash": "sha256-SRC8RUMtcIteGVmdJvjpu6migiiIw43gUNAJnPxgzYI=",
-        "owner": "VidocqH",
-        "repo": "lsp-lens.nvim",
-        "rev": "13d25ad8bd55aa34cc0aa3082e78a4157c401346",
-        "type": "github"
-      },
-      "original": {
-        "owner": "VidocqH",
-        "repo": "lsp-lens.nvim",
-        "type": "github"
-      }
-    },
-    "muren-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1687749898,
-        "narHash": "sha256-iUmWV8J1Sn6LsVMzmVFYdZyYcn11XX1wni2B/BllVeI=",
-        "owner": "AckslD",
-        "repo": "muren.nvim",
-        "rev": "e4558ab845f380915bb35b2fb7fea428b852cb8a",
-        "type": "github"
-      },
-      "original": {
-        "owner": "AckslD",
-        "repo": "muren.nvim",
-        "type": "github"
-      }
-    },
-    "navbuddy-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1688569844,
-        "narHash": "sha256-011RT/wnQdBR1vMrXFwxbicBAgdcd4eQYPbok/o3CIE=",
-        "owner": "SmiteshP",
-        "repo": "nvim-navbuddy",
-        "rev": "244a4cded6f2b568403684131d148048efe4e8af",
-        "type": "github"
-      },
-      "original": {
-        "owner": "SmiteshP",
-        "repo": "nvim-navbuddy",
-        "type": "github"
-      }
-    },
     "neovim": {
       "inputs": {
         "flake-utils": "flake-utils_2",
@@ -107,44 +59,24 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1689582805,
-        "narHash": "sha256-Qx/DVhF2+8pA8jC1o+mcwOaSVkMr4+e943JzfaoFmsQ=",
+        "lastModified": 1689945909,
+        "narHash": "sha256-167y1s9w4CV+CjetiTKZdhIeQS/OGCMfwK1DfWGPFRM=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "1211e44d5b89641d47cedbec89dd2210a0a1aca8",
+        "rev": "1708e6ad6340829bda29739ffa16a33c124cffd1",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "noneckpain-src": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1687617854,
-        "narHash": "sha256-xMmbgQ3O6GD0re25f+YJbLxbwAbZBlDj0Fk70iHHKGY=",
-        "owner": "shortcuts",
-        "repo": "no-neck-pain.nvim",
-        "rev": "fb27d3bff0834d9178250b439d46bfa04b4e1ae2",
-        "type": "github"
-      },
-      "original": {
-        "owner": "shortcuts",
-        "repo": "no-neck-pain.nvim",
         "type": "github"
       }
     },
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "lsplens-src": "lsplens-src",
-        "muren-src": "muren-src",
-        "navbuddy-src": "navbuddy-src",
         "neovim": "neovim",
         "nixpkgs": "nixpkgs",
-        "noneckpain-src": "noneckpain-src",
         "telescope-recent-files-src": "telescope-recent-files-src"
       }
     },

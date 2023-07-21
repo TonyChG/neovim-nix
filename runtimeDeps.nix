@@ -1,14 +1,20 @@
 { pkgs }:
 with pkgs; [
   ripgrep
-  clang
   xsel
   stylua
   ltex-ls
   lazygit
+  terraform-ls
+  gopls
+  docker-compose-language-service
+  vscode-langservers-extracted
+  yaml-language-server
+  lua-language-server
   # nix
-  statix
+  alejandra
   rnix-lsp
+  nixpkgs-fmt
   # rust 
   rustc
   rust-analyzer
@@ -16,9 +22,7 @@ with pkgs; [
   cargo
   # packages with results in /lib/node_modules/.bin must come at the end
   pyright
-  nodePackages.typescript
-  nodePackages.typescript-language-server
-  nodePackages.eslint_d
-  nodePackages.prettier
+  nodePackages.dockerfile-language-server-nodejs
+  nodePackages.bash-language-server
 ]
 
