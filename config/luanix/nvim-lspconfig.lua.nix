@@ -92,14 +92,6 @@
       on_attach = require("lsp-format").on_attach,
   }
 
-  require'lspconfig'.docker_compose_language_service.setup {
-      capabilities = capabilities,
-      cmd = { "docker-compose-langserver", "--stdio" },
-      filetypes = { "yaml", "yml" },
-      root_dir = require('lspconfig/util').root_pattern("docker-compose.yml", "docker-compose.yaml"),
-      on_attach = require("lsp-format").on_attach,
-  }
-
   require'lspconfig'.gopls.setup {
       capabilities = capabilities,
       on_attach = require("lsp-format").on_attach,
@@ -124,6 +116,7 @@
                   ["https://raw.githubusercontent.com/instrumenta/kubernetes-json-schema/master/v1.18.0-standalone-strict/all.json"] = "k8s/**/*.yml",
                   ["https://taskfile.dev/schema.json"] = "**/Taskfile.yml",
                   ["https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json"] = ".gitlab-ci.yml",
+                  ["https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json"] = "docker-compose.yml",
               },
           },
       },
