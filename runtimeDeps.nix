@@ -1,5 +1,6 @@
 { pkgs }:
 with pkgs; [
+  fd
   ripgrep
   xsel
   stylua
@@ -16,10 +17,8 @@ with pkgs; [
   rnix-lsp
   nixpkgs-fmt
   # rust 
-  rustc
   rust-analyzer
   rustfmt
-  cargo
   # packages with results in /lib/node_modules/.bin must come at the end
   pyright
   nodePackages.dockerfile-language-server-nodejs
