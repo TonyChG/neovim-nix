@@ -117,44 +117,42 @@
 
   require'lspconfig'.vuels.setup {
       capabilities = capabilities,
-      init_options = {
-          config = {
-              css = {},
-              emmet = {},
-              html = {
-                  suggest = {}
+      on_attach = function(client)
+          --[[
+          Internal Vetur formatting is not supported out of the box
+
+          This line below is required if you:
+          - want to format using Nvim's native `vim.lsp.buf.formatting**()`
+          - want to use Vetur's formatting config instead, e.g, settings.vetur.format {...}
+          --]]
+          client.resolved_capabilities.document_formatting = true
+          on_attach(client)
+      end,
+      settings = {
+          vetur = {
+              completion = {
+                  autoImport = true,
+                  useScaffoldSnippets = true
               },
-              javascript = {
-                  format = {}
-              },
-              stylusSupremacy = {},
-              typescript = {
-                  format = {}
-              },
-              vetur = {
-                  completion = {
-                      autoImport = true,
-                      tagCasing = "kebab",
-                      useScaffoldSnippets = false
-                  },
-                  format = {
-                      defaultFormatter = {
-                          js = "prettier",
-                          ts = "prettier"
-                      },
-                      defaultFormatterOptions = {},
-                      scriptInitialIndent = false,
-                      styleInitialIndent = false
-                  },
-                  useWorkspaceDependencies = false,
-                  validation = {
-                      script = true,
-                      style = true,
-                      template = true
+              format = {
+                  defaultFormatter = {
+                      html = "none",
+                      js = "prettier",
+                      ts = "prettier",
                   }
+              },
+              validation = {
+                  template = true,
+                  script = true,
+                  style = true,
+                  templateProps = true,
+                  interpolation = true
+              },
+              experimental = {
+                  templateInterpolationService = true
               }
           }
-      }
+      },
   }
 
   require'lspconfig'.yamlls.setup {
