@@ -129,6 +129,21 @@
         },
     }
 
+    require("lsp-format").setup {
+      typescript = {
+        tab_width = function()
+          return vim.opt.shiftwidth:get()
+        end,
+      },
+      javascript = { tab_width = 2 },
+      vue = { tab_width = 2 },
+    }
+
+    local prettier = {
+      formatCommand = [[prettier --stdin-filepath ''${INPUT} ''${--tab-width:tab_width}]],
+      formatStdin = true,
+    }
+
     require'lspconfig'.volar.setup{
         filetypes = {
             'javascript',
@@ -141,6 +156,13 @@
             typescript = {
                 tsdk = "${pkgs.nodePackages.typescript}/lib/node_modules/typescript/lib"
             }
+        },
+        settings = {
+          languages = {
+            javascript = { prettier },
+            typescript = { prettier },
+            vue = { prettier },
+          }
         }
     }
 ''
