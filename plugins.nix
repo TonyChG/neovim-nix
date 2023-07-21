@@ -69,4 +69,6 @@ with pkgs.vimPlugins; [
   null-ls-nvim
   lazygit-nvim
   telescope-recent-files
+  nvim-dap
+  nvim-dap-ui
 ]
