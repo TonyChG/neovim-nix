@@ -18,14 +18,6 @@ vim.cmd.colorscheme("monokai-pro")
 
 -- Options
 vim.opt.clipboard:append({ 'unnamedplus' })
-vim.opt.number = false
-vim.opt.expandtab = true
-vim.opt.shiftwidth = 4
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.ttimeout = true
-vim.opt.timeoutlen = 1000
-vim.opt.ttimeoutlen = 50
 vim.opt.cc = "80"
 vim.opt.listchars = {
     tab = "▸ ",
@@ -38,9 +30,6 @@ vim.opt.listchars = {
 
 -- Plugins
 vim.g.copilot_no_tab_map = true
-vim.g.onedark_config = {
-    style = "darker",
-}
 
 -- Keymaps
 vim.g.mapleader = ";"

@@ -49,6 +49,7 @@ with pkgs.vimPlugins; [
       p.vue
     ]
   ))
+
   copilot-vim
   nvim-lspconfig
   lspkind-nvim
