@@ -14,7 +14,10 @@ rt.setup({
 })
 
 vim.cmd.syntax("on")
-vim.cmd.colorscheme("monokai-pro")
+require('onedark').setup {
+    style = 'darker'
+}
+require('onedark').load()
 
 -- Options
 vim.opt.clipboard:append({ 'unnamedplus' })

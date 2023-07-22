@@ -67,10 +67,6 @@ with pkgs.vimPlugins; [
   rust-tools-nvim
   lsp-status-nvim
   diffview-nvim
-  null-ls-nvim
   lazygit-nvim
   telescope-recent-files
-  nvim-dap
-  nvim-dap-ui
-  neodev-nvim
 ]
