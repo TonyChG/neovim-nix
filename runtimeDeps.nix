@@ -24,7 +24,7 @@ with pkgs; [
   nodePackages.dockerfile-language-server-nodejs
   nodePackages.bash-language-server
   nodePackages.prettier
-  nodePackages.typescript
-  nodePackages."@volar/vue-language-server"
+  # nodePackages.typescript
+  # nodePackages."@volar/vue-language-server"
 ]
 
