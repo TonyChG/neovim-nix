@@ -33,6 +33,22 @@
         "type": "github"
       }
     },
+    "lsplens-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1689410007,
+        "narHash": "sha256-SRC8RUMtcIteGVmdJvjpu6migiiIw43gUNAJnPxgzYI=",
+        "owner": "VidocqH",
+        "repo": "lsp-lens.nvim",
+        "rev": "13d25ad8bd55aa34cc0aa3082e78a4157c401346",
+        "type": "github"
+      },
+      "original": {
+        "owner": "VidocqH",
+        "repo": "lsp-lens.nvim",
+        "type": "github"
+      }
+    },
     "neovim": {
       "inputs": {
         "flake-utils": "flake-utils_2",
@@ -75,6 +91,7 @@
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
+        "lsplens-src": "lsplens-src",
         "neovim": "neovim",
         "nixpkgs": "nixpkgs",
         "telescope-recent-files-src": "telescope-recent-files-src"

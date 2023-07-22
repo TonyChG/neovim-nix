@@ -165,4 +165,12 @@
           }
         }
     }
+
+    local rt = require("rust-tools")
+
+    rt.setup({
+      server = {
+        on_attach = require("lsp-format").on_attach,
+      },
+    })
 ''

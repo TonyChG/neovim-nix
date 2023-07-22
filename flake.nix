@@ -16,6 +16,11 @@
       flake = false;
     };
 
+    lsplens-src = {
+      url = "github:VidocqH/lsp-lens.nvim";
+      flake = false;
+    };
+
     flake-utils = {
       url = "github:numtide/flake-utils";
     };
@@ -30,6 +35,11 @@
           vimPlugins = final.vimPlugins // {
             telescope-recent-files = import ./packages/vimPlugins/telescopeRecentFiles.nix {
               src = inputs.telescope-recent-files-src;
+              pkgs = prev;
+            };
+
+            lsplens = import ./packages/vimPlugins/lsplens.nix {
+              src = inputs.lsplens-src;
               pkgs = prev;
             };
           };

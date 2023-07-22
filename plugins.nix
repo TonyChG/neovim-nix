@@ -53,6 +53,7 @@ with pkgs.vimPlugins; [
   copilot-vim
   nvim-lspconfig
   lspkind-nvim
+  lsplens
   nvim-cmp
   cmp-nvim-lsp
   cmp-buffer
