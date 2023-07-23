@@ -1,24 +1,35 @@
 { pkgs }:
 with pkgs.vimPlugins; [
+  # theme
   onedark-nvim
   monokai-pro-nvim
-  kommentary
-  indent-blankline-nvim-lua
-  nvim-autopairs
-  glow-nvim
-  gitsigns-nvim
   nvim-web-devicons
+
+  # editing
+  ssr-nvim
+  kommentary
+  nvim-autopairs
+  indent-blankline-nvim-lua
+
+  # git
+  lazygit-nvim
+  gitsigns-nvim
+  diffview-nvim
+
+  # ui
+  glow-nvim
   toggleterm-nvim
   lualine-nvim
   lualine-lsp-progress
   nvim-tree-lua
+  nvim-neoclip-lua
   telescope-nvim
+  telescope-recent-files
   plenary-nvim
   sqlite-lua
-  nvim-neoclip-lua
-  trouble-nvim
   registers-nvim
 
+  # syntax
   (nvim-treesitter.withPlugins (
     p: [
       p.javascript
@@ -49,11 +60,17 @@ with pkgs.vimPlugins; [
       p.vue
     ]
   ))
+  nvim-treesitter-context
 
+  # completion
   copilot-vim
-  nvim-lspconfig
-  lspkind-nvim
+  trouble-nvim
   lsplens
+  lspkind-nvim
+  lspsaga-nvim
+  lsp-format-nvim
+  lsp-status-nvim
+  nvim-lspconfig
   nvim-cmp
   cmp-nvim-lsp
   cmp-buffer
@@ -62,12 +79,7 @@ with pkgs.vimPlugins; [
   vim-vsnip
   cmp-cmdline
   cmp-emoji
-  lspsaga-nvim
-  nvim-treesitter-context
-  lsp-format-nvim
+
+  # rust
   rust-tools-nvim
-  lsp-status-nvim
-  diffview-nvim
-  lazygit-nvim
-  telescope-recent-files
 ]
