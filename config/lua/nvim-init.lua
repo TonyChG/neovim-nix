@@ -1,7 +1,3 @@
-require("nvim-autopairs").setup()
-require("glow").setup()
-require("registers").setup()
-
 vim.cmd.syntax("on")
 vim.cmd.colorscheme("monokai-pro-spectrum")
 
