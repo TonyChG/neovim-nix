@@ -3,10 +3,7 @@ require("glow").setup()
 require("registers").setup()
 
 vim.cmd.syntax("on")
-require('onedark').setup {
-    style = 'darker'
-}
-require('onedark').load()
+vim.cmd.colorscheme("monokai-pro")
 
 -- Options
 vim.opt.clipboard:append({ 'unnamedplus' })
