@@ -3,7 +3,7 @@ require("glow").setup()
 require("registers").setup()
 
 vim.cmd.syntax("on")
-vim.cmd.colorscheme("monokai-pro")
+vim.cmd.colorscheme("monokai-pro-spectrum")
 
 -- Options
 vim.opt.clipboard:append({ 'unnamedplus' })
