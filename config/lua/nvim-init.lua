@@ -22,7 +22,7 @@ vim.g.copilot_no_tab_map = true
 
 -- Keymaps
 vim.g.mapleader = ";"
-vim.keymap.set("t", '<C-p>', '<C-\\><C-n>')
+vim.keymap.set("t", '<ESC>', '<C-\\><C-n>')
 vim.keymap.set("n", '<C-f>', '<cmd>:Telescope find_files<CR>', { silent = true })
 vim.keymap.set("n", '<C-b>', '<cmd>:Telescope buffers<CR>', { silent = true })
 vim.keymap.set("n", '<C-g>', '<cmd>:Telescope live_grep<CR>', { silent = true })
