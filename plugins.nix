@@ -25,7 +25,6 @@ with pkgs.vimPlugins; [
   nvim-neoclip-lua
   telescope-nvim
   telescope-recent-files
-  telescope-ghq
   plenary-nvim
   sqlite-lua
   registers-nvim
