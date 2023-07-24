@@ -63,7 +63,9 @@ with pkgs.vimPlugins; [
   nvim-treesitter-context
 
   # completion
-  copilot-vim
+  # copilot-vim
+  copilot-lua
+  copilot-cmp
   trouble-nvim
   lsplens
   lspkind-nvim

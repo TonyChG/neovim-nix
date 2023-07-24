@@ -26,7 +26,7 @@
             end,
         },
         window = {
-            -- completion = cmp.config.window.bordered(),
+            completion = cmp.config.window.bordered(),
             -- documentation = cmp.config.window.bordered(),
         },
         mapping = cmp.mapping.preset.insert({
@@ -36,15 +36,17 @@
             ['<C-e>'] = cmp.mapping.abort(),
             ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
         }),
-        sources = cmp.config.sources({
-            { name = 'nvim_lsp' },
-            { name = 'vsnip' }, -- For vsnip users.
-        }, {
+        sources = {
+            -- Copilot Source
+            { name = "copilot", group_index = 2 },
+            -- Other Sources
+            { name = "nvim_lsp", group_index = 2 },
+            { name = 'vsnip', group_index = 2 }, -- For vsnip users.
+            { name = "path", group_index = 2 },
             { name = 'buffer' },
             { name = 'emoji' },
             { name = 'cmdline' },
-            { name = 'path' },
-        })
+        },
     })
 
     -- Set configuration for specific filetype.
