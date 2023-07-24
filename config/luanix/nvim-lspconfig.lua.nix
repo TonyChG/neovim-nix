@@ -124,6 +124,7 @@
                     ["https://raw.githubusercontent.com/instrumenta/kubernetes-json-schema/master/v1.18.0-standalone-strict/all.json"] = "k8s/**/*.yml",
                     ["https://taskfile.dev/schema.json"] = "**/Taskfile.yml",
                     ["https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json"] = ".gitlab-ci.yml",
+                    ["https://json.schemastore.org/container-structure-test.json"] = ".cst.yml",
                 },
             },
         },
