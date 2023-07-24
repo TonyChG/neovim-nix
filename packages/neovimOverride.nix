@@ -9,13 +9,13 @@ let
     paths = runtimeDeps;
     # see: https://ertt.ca/blog/2022/01-12-nix-symlinkJoin-nodePackages/
     postBuild = ''
-        for f in $out/lib/node_modules/.bin/*; do
-           path="$(readlink --canonicalize-missing "$f")"
-           ln -s "$path" "$out/bin/$(basename $f)"
-        done
+      for f in $out/lib/node_modules/.bin/*; do
+         path="$(readlink --canonicalize-missing "$f")"
+         ln -s "$path" "$out/bin/$(basename $f)"
+      done
     '';
   };
-  neovimPrimaMateriaUnwrapped =
+  neovimOverrideUnwrapped =
     pkgs.wrapNeovim pkgs.neovim {
       withNodeJs = true;
       configure = {
@@ -24,11 +24,12 @@ let
       };
     };
 
-in pkgs.writeShellApplication {
+in
+pkgs.writeShellApplication {
   name = "nvim";
   runtimeInputs = [ neovimRuntimeDependencies ];
   text = ''
-    ${neovimPrimaMateriaUnwrapped}/bin/nvim "$@"
+    ${neovimOverrideUnwrapped}/bin/nvim "$@"
   '';
 }
 

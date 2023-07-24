@@ -45,20 +45,20 @@
           };
         };
 
-        overlayNeovimPrimaMateria = prev: final: {
-          neovimPrimaMateria = import ./packages/neovimPrimaMateria.nix {
+        overlayNeovimOverride = prev: final: {
+          neovimOverride = import ./packages/neovimOverride.nix {
             pkgs = prev;
           };
         };
 
         pkgs = import inputs.nixpkgs {
           system = system;
-          overlays = [ overlayFlakeInputs overlayNeovimPrimaMateria ];
+          overlays = [ overlayFlakeInputs overlayNeovimOverride ];
         };
       in
       {
         packages = rec {
-          nvim = pkgs.neovimPrimaMateria;
+          nvim = pkgs.neovimOverride;
           default = nvim;
         };
 
