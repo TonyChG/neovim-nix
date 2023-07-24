@@ -63,7 +63,6 @@ with pkgs.vimPlugins; [
   nvim-treesitter-context
 
   # completion
-  # copilot-vim
   copilot-lua
   copilot-cmp
   trouble-nvim
@@ -73,12 +72,12 @@ with pkgs.vimPlugins; [
   lsp-format-nvim
   lsp-status-nvim
   nvim-lspconfig
+  vim-vsnip
   nvim-cmp
   cmp-nvim-lsp
   cmp-buffer
   cmp-path
   cmp-vsnip
-  vim-vsnip
   cmp-cmdline
   cmp-emoji
 

@@ -12,72 +12,57 @@
     })
     require("lsp-format").setup {}
 
-    -- Set up nvim-cmp.
-    local cmp = require'cmp'
-
-    cmp.setup({
-        snippet = {
-            -- REQUIRED - you must specify a snippet engine
-            expand = function(args)
-                vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-                -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-                -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
-                -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
-            end,
+    require("copilot").setup({
+      panel = {
+        enabled = true,
+        auto_refresh = true,
+        keymap = {
+          jump_prev = "[[",
+          jump_next = "]]",
+          accept = "<cr>",
+          refresh = "gr",
+          open = "<m-cr>"
         },
-        window = {
-            completion = cmp.config.window.bordered(),
-            -- documentation = cmp.config.window.bordered(),
+        layout = {
+          position = "bottom", -- | top | left | right
+          ratio = 0.4
         },
-        mapping = cmp.mapping.preset.insert({
-            ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-            ['<C-f>'] = cmp.mapping.scroll_docs(4),
-            ['<C-Space>'] = cmp.mapping.complete(),
-            ['<C-e>'] = cmp.mapping.abort(),
-            ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-        }),
-        sources = {
-            -- Copilot Source
-            { name = "copilot", group_index = 2 },
-            -- Other Sources
-            { name = "nvim_lsp", group_index = 2 },
-            { name = 'vsnip', group_index = 2 }, -- For vsnip users.
-            { name = "path", group_index = 2 },
-            { name = 'buffer' },
-            { name = 'emoji' },
-            { name = 'cmdline' },
+      },
+      suggestion = {
+        enabled = true,
+        auto_trigger = false,
+        debounce = 75,
+        keymap = {
+          accept = "<m-l>",
+          accept_word = false,
+          accept_line = false,
+          next = "<m-]>",
+          prev = "<m-[>",
+          dismiss = "<c-]>",
         },
-    })
-
-    -- Set configuration for specific filetype.
-    cmp.setup.filetype('gitcommit', {
-        sources = cmp.config.sources({
-            { name = 'git' }, -- You can specify the `git` source if [you were installed it](https://github.com/petertriho/cmp-git).
-        }, {
-            { name = 'buffer' },
-        })
-    })
-
-    -- Use buffer source for `/` and `?` (if you enabled `native_menu`, this won't work anymore).
-    cmp.setup.cmdline({ '/', '?' }, {
-        mapping = cmp.mapping.preset.cmdline(),
-        sources = {
-            { name = 'buffer' }
-        }
-    })
-
-    -- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-    cmp.setup.cmdline(':', {
-        mapping = cmp.mapping.preset.cmdline(),
-        sources = cmp.config.sources({
-            { name = 'path' }
-        }, {
-            { name = 'cmdline' }
-        })
+      },
+      filetypes = {
+        ["*"] = true,
+      },
+      copilot_node_command = 'node', -- node.js version must be > 16.x
+      server_opts_overrides = {},
     })
 
     -- Set up lspconfig.
     local capabilities = require('cmp_nvim_lsp').default_capabilities()
+    local lsp_status = require("lsp-status")
+
+    lsp_status.register_progress()
+    lsp_status.config {
+      status_symbol = "",
+      indicator_separator = "",
+      component_separator = "",
+      show_filename = false,
+      diagnostics = false,
+      current_function = false,
+    }
+
+    capabilities = vim.tbl_extend('keep', capabilities, lsp_status.capabilities)
 
     require'lspconfig'.pyright.setup {
         capabilities = capabilities,
