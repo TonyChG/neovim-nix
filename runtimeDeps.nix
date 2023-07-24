@@ -2,7 +2,7 @@
 with pkgs; [
   fd
   ghq
-  k9s
+  fasd
   ripgrep
   xsel
   stylua

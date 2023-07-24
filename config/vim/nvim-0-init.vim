@@ -33,3 +33,17 @@ smap <expr> <Tab>   vsnip#jumpable(1)   ? '<Plug>(vsnip-jump-next)'      : '<Tab
 imap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
 smap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
 
+" fasd
+function! s:Go(pattern)
+    let match = system('fasd '.a:pattern)
+
+    execute ":lcd ".match
+endfunction
+
+" Change working directory to the current file directory
+function! s:GoCurrent()
+    execute ":lcd %:p:h"
+endfunction
+
+command! -nargs=1 Z call s:Go(<f-args>)
+command! Gc call s:GoCurrent()
