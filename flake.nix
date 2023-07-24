@@ -21,6 +21,11 @@
       flake = false;
     };
 
+    telescope-ghq-src = {
+      url = "github:nvim-telescope/telescope-ghq.nvim";
+      flake = false;
+    };
+
     flake-utils = {
       url = "github:numtide/flake-utils";
     };
@@ -40,6 +45,11 @@
 
             lsplens = import ./packages/vimPlugins/lsplens.nix {
               src = inputs.lsplens-src;
+              pkgs = prev;
+            };
+
+            telescope-ghq = import ./packages/vimPlugins/telescope-ghq.nix {
+              src = inputs.telescope-ghq-src;
               pkgs = prev;
             };
           };
