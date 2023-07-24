@@ -98,8 +98,13 @@
     }
 
     require'lspconfig'.eslint.setup {
-        capabilities = capabilities,
-        on_attach = require("lsp-format").on_attach,
+      capabilities = capabilities,
+      on_attach = require("lsp-format").on_attach,
+    }
+
+    require'lspconfig'.lua_ls.setup{
+      capabilities = capabilities,
+      on_attach = require("lsp-format").on_attach,
     }
 
     require'lspconfig'.yamlls.setup {
