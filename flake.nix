@@ -11,6 +11,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    telescope-ghq-src = {
+      url = "github:nvim-telescope/telescope-ghq.nvim";
+      flake = false;
+    };
+
     telescope-recent-files-src = {
       url = "github:smartpde/telescope-recent-files";
       flake = false;
@@ -35,6 +40,11 @@
           vimPlugins = final.vimPlugins // {
             telescope-recent-files = import ./packages/vimPlugins/telescopeRecentFiles.nix {
               src = inputs.telescope-recent-files-src;
+              pkgs = prev;
+            };
+
+            telescope-ghq = import ./packages/vimPlugins/telescopeghq.nix {
+              src = inputs.telescope-ghq-src;
               pkgs = prev;
             };
 

@@ -11,6 +11,7 @@ nnoremap <silent> <C-f> :Telescope find_files<CR>
 nnoremap <silent> <C-b> :Telescope buffers<CR>
 nnoremap <silent> <C-g> :Telescope live_grep<CR>
 nnoremap <silent> <C-p> :Telescope builtin<CR>
+nnoremap <silent> <C-i> :lua require("telescope").extensions.ghq.list()<CR>
 nnoremap <silent> <space>e :NvimTreeToggle<CR>
 
 " fasd

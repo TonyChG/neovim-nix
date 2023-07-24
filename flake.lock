@@ -94,6 +94,7 @@
         "lsplens-src": "lsplens-src",
         "neovim": "neovim",
         "nixpkgs": "nixpkgs",
+        "telescope-ghq-src": "telescope-ghq-src",
         "telescope-recent-files-src": "telescope-recent-files-src"
       }
     },
@@ -109,6 +110,22 @@
       "original": {
         "owner": "nix-systems",
         "repo": "default",
+        "type": "github"
+      }
+    },
+    "telescope-ghq-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1638784863,
+        "narHash": "sha256-Uct+2jg9qZD7V3eSnICLNu2jpaQLc3ugW8qunPiAynM=",
+        "owner": "nvim-telescope",
+        "repo": "telescope-ghq.nvim",
+        "rev": "dc1022f91100ca06c9c7bd645f08e2bf985ad283",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nvim-telescope",
+        "repo": "telescope-ghq.nvim",
         "type": "github"
       }
     },
