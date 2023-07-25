@@ -122,6 +122,18 @@
     },
   }
 
+  require'lspconfig'.rust_analyzer.setup{
+    capabilities = capabilities,
+    on_attach = require("lsp-format").on_attach,
+    settings = {
+      ['rust-analyzer'] = {
+        diagnostics = {
+          enable = false;
+        },
+      }
+    }
+  }
+
   require("lsp-format").setup {
     typescript = {
       tab_width = function()
@@ -158,12 +170,4 @@
       }
     }
   }
-
-  local rt = require("rust-tools")
-
-  rt.setup({
-    server = {
-      on_attach = require("lsp-format").on_attach,
-    },
-  })
 ''

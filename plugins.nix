@@ -82,7 +82,4 @@ with pkgs.vimPlugins; [
   cmp-vsnip
   cmp-cmdline
   cmp-emoji
-
-  # rust
-  rust-tools-nvim
 ]
