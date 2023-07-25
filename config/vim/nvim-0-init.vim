@@ -12,7 +12,7 @@ nnoremap <silent> <C-b> :Telescope buffers<CR>
 nnoremap <silent> <C-g> :Telescope live_grep<CR>
 nnoremap <silent> <leader>b :Telescope builtin<CR>
 nnoremap <silent> <leader>p :lua require("telescope").extensions.ghq.list()<CR>
-nnoremap <silent> <space>e :NvimTreeToggle<CR>
+nnoremap <silent> <leader>t :NvimTreeToggle<CR>
 
 " fasd
 function! s:Go(pattern)
