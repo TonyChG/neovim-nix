@@ -3,6 +3,7 @@ with pkgs; [
   fd
   ghq
   fasd
+  sops
   ripgrep
   xsel
   stylua
