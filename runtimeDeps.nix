@@ -1,6 +1,7 @@
 { pkgs }:
 with pkgs; [
   fd
+  gh
   ghq
   fasd
   sops
