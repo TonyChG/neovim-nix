@@ -15,6 +15,7 @@ with pkgs.vimPlugins; [
   lazygit-nvim
   gitsigns-nvim
   diffview-nvim
+  fugitive
 
   # ui
   glow-nvim
