@@ -3,6 +3,7 @@ with pkgs; [
   fd
   gh
   ghq
+  glab
   fasd
   sops
   ripgrep
@@ -20,7 +21,7 @@ with pkgs; [
   alejandra
   rnix-lsp
   nixpkgs-fmt
-  # rust 
+  # rust
   rust-analyzer
   rustfmt
   # packages with results in /lib/node_modules/.bin must come at the end
