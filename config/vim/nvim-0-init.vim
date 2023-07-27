@@ -13,6 +13,9 @@ nnoremap <silent> <C-g> :Telescope live_grep<CR>
 nnoremap <silent> <leader>b :Telescope builtin<CR>
 nnoremap <silent> <leader>p :lua require("telescope").extensions.ghq.list()<CR>
 nnoremap <silent> <leader>t :NvimTreeToggle<CR>
+nnoremap <silent> <leader>c :ToggleTerm direction=tab<CR>
+nnoremap <silent> <leader>* 2:ToggleTerm direction=vertical<CR>
+nnoremap <silent> <leader>v 2:ToggleTerm direction=horizontal<CR>
 
 " fasd
 function! s:Go(pattern)
