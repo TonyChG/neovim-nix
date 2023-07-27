@@ -1,15 +1,17 @@
 # vim: ft=lua
 { pkgs }:
 ''
-    require("lspsaga").setup({})
     require("lspkind").init({
       mode = 'symbol_text',
       preset = 'codicons',
     })
+
     require("trouble").setup({})
+
     require('treesitter-context').setup({
       enable = true,
     })
+
     require("lsp-format").setup {}
 
     require("copilot").setup({

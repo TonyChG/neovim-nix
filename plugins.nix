@@ -71,7 +71,6 @@ with pkgs.vimPlugins; [
   trouble-nvim
   lsplens
   lspkind-nvim
-  lspsaga-nvim
   lsp-format-nvim
   lsp-status-nvim
   nvim-lspconfig
