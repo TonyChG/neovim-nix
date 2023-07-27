@@ -64,6 +64,15 @@
     require'lspconfig'.dockerls.setup {
       capabilities = capabilities,
       on_attach = require("lsp-format").on_attach,
+      settings = {
+        docker = {
+          languageserver = {
+            formatter = {
+              ignoreMultilineInstructions = true,
+            }
+          }
+        }
+      }
     }
 
     require'lspconfig'.docker_compose_language_service.setup {
