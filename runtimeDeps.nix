@@ -11,6 +11,7 @@ with pkgs; [
   stylua
   ltex-ls
   lazygit
+  lazydocker
   terraform-ls
   gopls
   docker-compose-language-service
