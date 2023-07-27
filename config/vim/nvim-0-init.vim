@@ -2,7 +2,7 @@ syntax on
 filetype plugin indent on
 
 let mapleader = ";"
-colorscheme monokai-pro-spectrum
+colorscheme rose-pine
 
 set list listchars=trail:~,tab:>-,nbsp:␣,eol:↲
 
