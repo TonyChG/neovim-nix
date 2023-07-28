@@ -6,6 +6,7 @@ require('telescope').setup {
       '%.png',
       '%.jpeg',
       '%.jpg',
+      '%.npm',
     }
   },
   pickers = {
