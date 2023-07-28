@@ -12,7 +12,7 @@
     };
 
     telescope-ghq-src = {
-      url = "github:nvim-telescope/telescope-ghq.nvim";
+      url = "github:tonychg/telescope-ghq.nvim";
       flake = false;
     };
 

@@ -116,15 +116,15 @@
     "telescope-ghq-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1638784863,
-        "narHash": "sha256-Uct+2jg9qZD7V3eSnICLNu2jpaQLc3ugW8qunPiAynM=",
-        "owner": "nvim-telescope",
+        "lastModified": 1690540990,
+        "narHash": "sha256-WjHDFds9M10NDR8Ay/KdGJj1a7G0hbGva6y6oxnjG5Q=",
+        "owner": "tonychg",
         "repo": "telescope-ghq.nvim",
-        "rev": "dc1022f91100ca06c9c7bd645f08e2bf985ad283",
+        "rev": "2cfc9e2be3823d21e1fb51f63d8daf7771ab6a3d",
         "type": "github"
       },
       "original": {
-        "owner": "nvim-telescope",
+        "owner": "tonychg",
         "repo": "telescope-ghq.nvim",
         "type": "github"
       }
