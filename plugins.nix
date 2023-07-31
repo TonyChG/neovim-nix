@@ -73,6 +73,7 @@ with pkgs.vimPlugins; [
   lspkind-nvim
   lsp-format-nvim
   lsp-status-nvim
+  null-ls-nvim
   nvim-lspconfig
   vim-vsnip
   nvim-cmp
