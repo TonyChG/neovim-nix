@@ -8,6 +8,8 @@ with pkgs; [
   sops
   ripgrep
   xsel
+  typos
+  black
   stylua
   ltex-ls
   lazygit
