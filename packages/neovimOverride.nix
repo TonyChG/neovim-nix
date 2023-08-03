@@ -29,7 +29,7 @@ pkgs.writeShellApplication {
   name = "nvim";
   runtimeInputs = [ neovimRuntimeDependencies ];
   text = ''
-    ${neovimOverrideUnwrapped}/bin/nvim "$@"
+    ${neovimOverrideUnwrapped}/bin/nvim "$@" --listen /tmp/nvimsocket
   '';
 }
 

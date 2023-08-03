@@ -6,6 +6,8 @@ with pkgs; [
   glab
   fasd
   sops
+  neovim-remote
+  chezmoi
   ripgrep
   xsel
   typos
