@@ -80,7 +80,6 @@
     require'lspconfig'.docker_compose_language_service.setup {
       capabilities = capabilities,
       cmd = { "docker-compose-langserver", "--stdio" },
-      filetypes = { "yaml", "yml" },
       root_dir = require('lspconfig/util').root_pattern("docker-compose.yml", "docker-compose.yaml"),
       on_attach = require("lsp-format").on_attach,
     }
@@ -192,7 +191,9 @@
             null_ls.builtins.completion.vsnip,
             null_ls.builtins.diagnostics.dotenv_linter,
             null_ls.builtins.formatting.black,
-            null_ls.builtins.formatting.prettier,
+            null_ls.builtins.formatting.prettier.with({
+              filetypes = {"html", "yaml", "json", "mardkwon", "js", "vue"},
+            }),
             null_ls.builtins.diagnostics.typos,
         },
     })
