@@ -77,12 +77,12 @@
       }
     }
 
-    require'lspconfig'.docker_compose_language_service.setup {
+    --[[ require'lspconfig'.docker_compose_language_service.setup {
       capabilities = capabilities,
       cmd = { "docker-compose-langserver", "--stdio" },
       root_dir = require('lspconfig/util').root_pattern("docker-compose.yml", "docker-compose.yaml"),
       on_attach = require("lsp-format").on_attach,
-    }
+    } ]]
 
     require'lspconfig'.gopls.setup {
       capabilities = capabilities,
@@ -140,7 +140,7 @@
         'vue',
       },
       capabilities = capabilities,
-      on_attach = require("lsp-format").on_attach,
+      -- on_attach = require("lsp-format").on_attach,
       init_options = {
         typescript = {
           tsdk = "${pkgs.nodePackages.typescript}/lib/node_modules/typescript/lib"
@@ -191,9 +191,6 @@
             null_ls.builtins.completion.vsnip,
             null_ls.builtins.diagnostics.dotenv_linter,
             null_ls.builtins.formatting.black,
-            null_ls.builtins.formatting.prettier.with({
-              filetypes = {"html", "yaml", "json", "mardkwon", "js", "vue"},
-            }),
             null_ls.builtins.diagnostics.typos,
         },
     })

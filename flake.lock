@@ -5,11 +5,11 @@
         "systems": "systems"
       },
       "locked": {
-        "lastModified": 1689068808,
-        "narHash": "sha256-6ixXo3wt24N/melDWjq70UuHQLxGV8jZvooRanIHXw0=",
+        "lastModified": 1692799911,
+        "narHash": "sha256-3eihraek4qL744EvQXsK1Ha6C3CR7nnT8X2qWap4RNk=",
         "owner": "numtide",
         "repo": "flake-utils",
-        "rev": "919d646de7be200f3bf08cb76ae1f09402b6f9b4",
+        "rev": "f9e7cf818399d17d347f847525c5a5a8032e4e44",
         "type": "github"
       },
       "original": {
@@ -75,11 +75,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1689945909,
-        "narHash": "sha256-167y1s9w4CV+CjetiTKZdhIeQS/OGCMfwK1DfWGPFRM=",
+        "lastModified": 1692799768,
+        "narHash": "sha256-LRfyudV2M+j5Y+4LuuL/hra17aGpuCecpcxPfuqWmq0=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "1708e6ad6340829bda29739ffa16a33c124cffd1",
+        "rev": "932dc0d4415c919db0261eeda6bfff8827b9bf3a",
         "type": "github"
       },
       "original": {
@@ -116,11 +116,11 @@
     "telescope-ghq-src": {
       "flake": false,
       "locked": {
-        "lastModified": 1690540990,
-        "narHash": "sha256-WjHDFds9M10NDR8Ay/KdGJj1a7G0hbGva6y6oxnjG5Q=",
+        "lastModified": 1692800109,
+        "narHash": "sha256-jd4mqEbNXkJaqE5By8+Wn6FZ3jc8i181uXHCzyFgSh8=",
         "owner": "tonychg",
         "repo": "telescope-ghq.nvim",
-        "rev": "2cfc9e2be3823d21e1fb51f63d8daf7771ab6a3d",
+        "rev": "39f7f346e4f302aa1bd507fe143b3113963b889b",
         "type": "github"
       },
       "original": {
