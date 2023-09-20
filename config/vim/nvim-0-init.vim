@@ -2,9 +2,9 @@ syntax on
 filetype plugin indent on
 
 let mapleader = ";"
-colorscheme monokai-pro-spectrum
+colorscheme rose-pine
 
-set list listchars=trail:~,tab:>-,nbsp:␣,eol:↲
+" set list listchars=trail:~,tab:>-,nbsp:␣,eol:↲
 
 tnoremap <silent> <C-p> <C-\><C-n>
 nnoremap <silent> <C-f> :Telescope find_files<CR>
