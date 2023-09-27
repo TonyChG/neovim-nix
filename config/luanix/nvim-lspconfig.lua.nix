@@ -106,17 +106,23 @@
 
     require'lspconfig'.yamlls.setup {
       capabilities = capabilities,
-      on_attach = require("lsp-format").on_attach,
+      -- on_attach = require("lsp-format").on_attach,
       settings = {
         yaml = {
           format = {
               bracketSpacing = false,
+              enable = true,
           },
+          customTags = {"!reference sequence"},
           schemas = {
             ["https://raw.githubusercontent.com/instrumenta/kubernetes-json-schema/master/v1.18.0-standalone-strict/all.json"] = "k8s/**/*.yml",
-            ["https://taskfile.dev/schema.json"] = "**/Taskfile.yml",
-            ["https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json"] = ".gitlab-ci.yml",
+            ["https://taskfile.dev/schema.json"] = "**/Taskfile.*",
+            ["https://gitlab.com/gitlab-org/gitlab/-/raw/master/app/assets/javascripts/editor/schema/ci.json"] = {".gitlab-ci.yml", "ci/environments/**/*.yaml", "ci/modules/**/*.yaml"},
             ["https://json.schemastore.org/container-structure-test.json"] = ".cst.yml",
+          },
+          editor = {
+            formatOnType = true,
+            tabSize = 2,
           },
         },
       },
