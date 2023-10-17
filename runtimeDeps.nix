@@ -31,6 +31,7 @@ with pkgs; [
   rustfmt
   # packages with results in /lib/node_modules/.bin must come at the end
   pyright
+  nodejs
   nodePackages.dockerfile-language-server-nodejs
   nodePackages.bash-language-server
   nodePackages.prettier

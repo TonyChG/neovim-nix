@@ -25,3 +25,5 @@ set noswapfile
 set laststatus=3
 set re=0
 set eol
+
+let g:editorconfig = v:false
