@@ -32,6 +32,7 @@ with pkgs.vimPlugins; [
   plenary-nvim
   sqlite-lua
   registers-nvim
+  fzf-lua
 
   # syntax
   (nvim-treesitter.withPlugins (
