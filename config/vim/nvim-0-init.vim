@@ -33,3 +33,5 @@ endfunction
 command! -nargs=1 Z call s:Go(<f-args>)
 command! Gc call s:GoCurrent()
 
+set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
+set grepformat=%f:%l:%c:%m
