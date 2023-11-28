@@ -12,6 +12,7 @@ nnoremap <silent> <C-x> <cmd>lua require('fzf-lua').quickfix()<CR>
 nnoremap <silent> <C-b> :Telescope buffers<CR>
 nnoremap <silent> <C-g> <cmd>lua require('fzf-lua').live_grep()<CR>
 nnoremap <silent> <leader>b :Telescope builtin<CR>
+nnoremap <silent> <leader>o :Telescope oldfiles<CR>
 nnoremap <silent> <leader>p :lua require("telescope").extensions.ghq.list()<CR>
 nnoremap <silent> <leader>t :NvimTreeToggle<CR>
 nnoremap <silent> <leader>c :ToggleTerm direction=tab<CR>
