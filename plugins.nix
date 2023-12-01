@@ -10,6 +10,7 @@ with pkgs.vimPlugins; [
   ssr-nvim
   kommentary
   nvim-autopairs
+  nvim-spectre
   indent-blankline-nvim-lua
 
   # git

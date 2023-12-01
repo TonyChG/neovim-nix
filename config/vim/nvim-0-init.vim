@@ -18,6 +18,10 @@ nnoremap <silent> <leader>t :NvimTreeToggle<CR>
 nnoremap <silent> <leader>c :ToggleTerm direction=tab<CR>
 nnoremap <silent> <leader>* 2:ToggleTerm direction=vertical<CR>
 nnoremap <silent> <leader>v 2:ToggleTerm direction=horizontal<CR>
+nnoremap <silent> <leader>S <cmd>lua require("spectre").toggle()<CR>
+nnoremap <silent> <leader>sw <cmd>lua require("spectre").open_visual({select_word=true})<CR>
+nnoremap <silent> <leader>sp <cmd>lua require("spectre").open_file_search({select_word=true})<CR>
+vnoremap <silent> <leader>sw <esc><cmd>lua require("spectre").open_visual()<CR>
 
 " fasd
 function! s:Go(pattern)
