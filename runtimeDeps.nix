@@ -14,7 +14,6 @@ with pkgs; [
   black
   stylua
   ltex-ls
-  lazygit
   lazydocker
   terraform-ls
   gopls

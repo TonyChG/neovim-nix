@@ -14,7 +14,6 @@ with pkgs.vimPlugins; [
   indent-blankline-nvim-lua
 
   # git
-  lazygit-nvim
   gitsigns-nvim
   diffview-nvim
   fugitive
