@@ -1,7 +1,7 @@
 syntax on
 filetype plugin indent on
 
-let mapleader = ";"
+let mapleader = " "
 colorscheme monokai-pro-spectrum
 
 " set list listchars=trail:~,tab:>-,nbsp:␣,eol:↲
@@ -21,7 +21,7 @@ nnoremap <silent> <leader>o :Telescope oldfiles<CR>
 nnoremap <silent> <leader>p :lua require("telescope").extensions.ghq.list()<CR>
 
 " toggleterm
-nnoremap <silent> <leader>c :ToggleTerm direction=tab<CR>
+nnoremap <silent> <leader>cc :ToggleTerm direction=tab<CR>
 nnoremap <silent> <leader>* 2:ToggleTerm direction=vertical<CR>
 nnoremap <silent> <leader>v 2:ToggleTerm direction=horizontal<CR>
 
