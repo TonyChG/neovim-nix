@@ -2,24 +2,27 @@ syntax on
 filetype plugin indent on
 
 let mapleader = " "
-" colorscheme monokai-pro-spectrum
 colorscheme rose-pine
 
-" set list listchars=trail:~,tab:>-,nbsp:␣,eol:↲
+xnoremap <silent> <leader>p "_dP
 
 tnoremap <silent> <C-p> <C-\><C-n>
+nnoremap <silent> <C-d> <C-d>zz
+nnoremap <silent> <C-u> <C-u>zz
+nnoremap <silent> <C-f> <C-f>zz
+nnoremap <silent> <C-b> <C-b>zz
 nnoremap <silent> <leader>t :NvimTreeToggle<CR>
 
 " fzf
-nnoremap <silent> <C-f> <cmd>lua require('fzf-lua').files()<CR>
-nnoremap <silent> <C-x> <cmd>lua require('fzf-lua').quickfix()<CR>
-nnoremap <silent> <C-g> <cmd>lua require('fzf-lua').live_grep()<CR>
+nnoremap <silent> <leader>f <cmd>lua require('fzf-lua').files()<CR>
+nnoremap <silent> <leader>x <cmd>lua require('fzf-lua').quickfix()<CR>
+nnoremap <silent> <leader>g <cmd>lua require('fzf-lua').live_grep()<CR>
 
 " telescope
-nnoremap <silent> <C-b> :Telescope buffers<CR>
-nnoremap <silent> <leader>b :Telescope builtin<CR>
+nnoremap <silent> <leader>b :Telescope buffers<CR>
+nnoremap <silent> <leader>bb :Telescope builtin<CR>
 nnoremap <silent> <leader>o :Telescope oldfiles<CR>
-nnoremap <silent> <leader>p :lua require("telescope").extensions.ghq.list()<CR>
+nnoremap <silent> <leader>m :lua require("telescope").extensions.ghq.list()<CR>
 
 " toggleterm
 nnoremap <silent> <leader>cc :ToggleTerm direction=tab<CR>
