@@ -72,6 +72,7 @@ with pkgs.vimPlugins; [
   copilot-cmp
   trouble-nvim
   lsplens
+  lspsaga-nvim
   lspkind-nvim
   lsp-format-nvim
   lsp-status-nvim

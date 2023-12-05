@@ -2,7 +2,8 @@ syntax on
 filetype plugin indent on
 
 let mapleader = " "
-colorscheme monokai-pro-spectrum
+" colorscheme monokai-pro-spectrum
+colorscheme rose-pine
 
 " set list listchars=trail:~,tab:>-,nbsp:␣,eol:↲
 
@@ -29,6 +30,7 @@ nnoremap <silent> <leader>v 2:ToggleTerm direction=horizontal<CR>
 nnoremap <silent> <leader>S <cmd>lua require("spectre").toggle()<CR>
 nnoremap <silent> <leader>sw <cmd>lua require("spectre").open_visual({select_word=true})<CR>
 nnoremap <silent> <leader>sp <cmd>lua require("spectre").open_file_search({select_word=true})<CR>
+nnoremap <silent> <leader>sr <cmd>Lspsaga rename<CR>
 vnoremap <silent> <leader>sw <esc><cmd>lua require("spectre").open_visual()<CR>
 
 " fugitive
