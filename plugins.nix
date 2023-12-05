@@ -18,7 +18,6 @@ with pkgs.vimPlugins; [
   gitsigns-nvim
   diffview-nvim
   fugitive
-  git-conflict-nvim
 
   # ui
   glow-nvim
