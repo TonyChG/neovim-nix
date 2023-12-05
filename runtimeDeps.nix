@@ -3,6 +3,7 @@ with pkgs; [
   fd
   gh
   ghq
+  fzf
   glab
   fasd
   sops
