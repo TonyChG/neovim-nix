@@ -32,6 +32,7 @@ nnoremap <silent> <leader>sp <cmd>lua require("spectre").open_file_search({selec
 vnoremap <silent> <leader>sw <esc><cmd>lua require("spectre").open_visual()<CR>
 
 " fugitive
+let g:fugitive_pty = 0
 nnoremap <silent> <leader>gs :Git<CR>
 nnoremap <silent> <leader>gl :Gclog<CR>
 nnoremap <silent> <leader>gp :Git push<CR>

@@ -20,7 +20,7 @@ set splitright
 set relativenumber
 set sessionoptions+=tabpages,globals
 set ignorecase
-set clipboard+=unnamedplus
+" set clipboard+=unnamedplus
 set noswapfile
 set laststatus=3
 set re=0

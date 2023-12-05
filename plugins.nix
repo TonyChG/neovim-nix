@@ -12,6 +12,7 @@ with pkgs.vimPlugins; [
   nvim-autopairs
   nvim-spectre
   indent-blankline-nvim-lua
+  nvim-surround
 
   # git
   gitsigns-nvim
