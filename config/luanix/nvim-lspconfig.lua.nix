@@ -135,6 +135,7 @@
   require'lspconfig'.terraformls.setup {
     capabilities = capabilities,
     on_attach = require("lsp-format").on_attach,
+    root_pattern = { ".git", ".terraform" },
   }
 
   require'lspconfig'.dockerls.setup {
