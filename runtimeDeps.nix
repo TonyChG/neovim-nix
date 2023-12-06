@@ -17,6 +17,7 @@ with pkgs; [
   ltex-ls
   lazydocker
   terraform-ls
+  terraform-lsp
   gopls
   docker-compose-language-service
   vscode-langservers-extracted
