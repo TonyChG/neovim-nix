@@ -80,6 +80,7 @@ with pkgs.vimPlugins; [
   nvim-lspconfig
   vim-vsnip
   nvim-cmp
+  cmp-git
   cmp-nvim-lsp
   cmp-buffer
   cmp-path

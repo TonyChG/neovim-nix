@@ -44,6 +44,9 @@
       { name = "nvim_lsp", group_index = 2 },
       { name = "vsnip", group_index = 2 }, -- For vsnip users.
       { name = "path", group_index = 2 },
+      { name = "cmdline", group_index = 2 },
+      { name = "buffer", group_index = 2 },
+      { name = "git", group_index = 2 },
       { name = "emoji" },
     },
   })
@@ -62,6 +65,7 @@
     mapping = cmp.mapping.preset.cmdline(),
     sources = {
       { name = "buffer" },
+      { name = "path" },
     },
   })
 
@@ -119,6 +123,7 @@
     },
     filetypes = {
       ["*"] = true,
+      yaml = true,
     },
     copilot_node_command = 'node', -- node.js version must be > 16.x
     server_opts_overrides = {},
@@ -129,7 +134,7 @@
 
   require'lspconfig'.pyright.setup {
     capabilities = capabilities,
-    on_attach = require("lsp-format").on_attach
+    on_attach = require("lsp-format").on_attach,
   }
 
   require'lspconfig'.terraformls.setup {
@@ -243,6 +248,8 @@
     server = {
       on_attach = require("lsp-format").on_attach,
       capabilities = capabilities,
+      cmd = { "direnv",  "exec", ".", "rust-analyzer" },
+      root_pattern = {"Cargo.toml", "Cargo.lock"},
     },
   })
 
