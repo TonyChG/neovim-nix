@@ -11,7 +11,6 @@ set hidden
 set guicursor=
 set scrolloff=0
 set signcolumn=yes
-set colorcolumn=80
 set undofile
 set incsearch
 set updatetime=50
