@@ -44,7 +44,6 @@
       { name = "nvim_lsp", group_index = 2 },
       { name = "vsnip", group_index = 2 }, -- For vsnip users.
       { name = "path", group_index = 2 },
-      { name = "cmdline", group_index = 2 },
       { name = "buffer", group_index = 2 },
       { name = "git", group_index = 2 },
       { name = "emoji" },
