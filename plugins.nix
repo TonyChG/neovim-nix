@@ -13,6 +13,7 @@ with pkgs.vimPlugins; [
   nvim-spectre
   indent-blankline-nvim-lua
   nvim-surround
+  undotree
 
   # git
   gitsigns-nvim
