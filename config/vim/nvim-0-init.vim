@@ -16,7 +16,7 @@ nnoremap <silent> <leader>t :NvimTreeToggle<CR>
 " fzf
 nnoremap <silent> <leader>f <cmd>lua require('fzf-lua').files()<CR>
 nnoremap <silent> <leader>x <cmd>lua require('fzf-lua').quickfix()<CR>
-nnoremap <silent> <leader>g <cmd>lua require('fzf-lua').live_grep()<CR>
+nnoremap <silent> <leader>gg <cmd>lua require('fzf-lua').live_grep()<CR>
 
 " telescope
 nnoremap <silent> <leader>b :Telescope buffers<CR>
@@ -39,11 +39,12 @@ vnoremap <silent> <leader>sw <esc><cmd>lua require("spectre").open_visual()<CR>
 " fugitive
 let g:fugitive_pty = 0
 nnoremap <silent> <leader>gs :Git<CR>
-nnoremap <silent> <leader>gl :Gclog<CR>
+nnoremap <silent> <leader>gcl :Gclog<CR>
 nnoremap <silent> <leader>gp :Git push<CR>
-nnoremap <silent> <leader>gpf :Git push -f<CR>
-nnoremap <silent> <leader>gP :Git pull<CR>
-nnoremap <silent> <leader>gf :Git fetch --all<CR>
+nnoremap <silent> <leader>gup :Git push -u origin HEAD<CR>
+nnoremap <silent> <leader>gP :Git push -f<CR>
+nnoremap <silent> <leader>gl :Git pull<CR>
+nnoremap <silent> <leader>gf :Git fetch --all --prune<CR>
 nnoremap <silent> <leader>gv :Gvdiffsplit<CR>
 nnoremap <silent> <leader>gb :Git_blame<CR>
 nnoremap <silent> <leader>gcc :Git commit<CR>
