@@ -28,6 +28,7 @@ with pkgs; [
   rnix-lsp
   nixpkgs-fmt
   # rust
+  cargo
   rust-analyzer
   rustfmt
   # packages with results in /lib/node_modules/.bin must come at the end
