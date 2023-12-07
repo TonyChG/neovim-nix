@@ -9,7 +9,6 @@ with pkgs.vimPlugins; [
   # editing
   ssr-nvim
   kommentary
-  nvim-autopairs
   nvim-spectre
   indent-blankline-nvim-lua
   nvim-surround
@@ -80,6 +79,7 @@ with pkgs.vimPlugins; [
   null-ls-nvim
   nvim-lspconfig
   vim-vsnip
+  vim-vsnip-integ
   nvim-cmp
   cmp-git
   cmp-nvim-lsp

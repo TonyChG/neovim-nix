@@ -2,7 +2,50 @@
 { pkgs }:
 ''  -- Set up nvim-cmp.
   local cmp = require'cmp'
+
+  require("copilot").setup({
+    panel = {
+      enabled = false,
+      auto_refresh = true,
+      keymap = {
+        jump_prev = "[[",
+        jump_next = "]]",
+        accept = "<cr>",
+        refresh = "gr",
+        open = "<m-cr>"
+      },
+      layout = {
+        position = "bottom", -- | top | left | right
+        ratio = 0.4
+      },
+    },
+    suggestion = {
+      enabled = false,
+      auto_trigger = false,
+      debounce = 75,
+      keymap = {
+        accept = "<m-l>",
+        accept_word = false,
+        accept_line = false,
+        next = "<m-]>",
+        prev = "<m-[>",
+        dismiss = "<c-]>",
+      },
+    },
+    filetypes = {
+      ["*"] = true,
+      yaml = true,
+    },
+    copilot_node_command = 'node', -- node.js version must be > 16.x
+    server_opts_overrides = {},
+  })
   require("copilot_cmp").setup()
+
+  local has_words_before = function()
+    if vim.api.nvim_buf_get_option(0, "buftype") == "prompt" then return false end
+    local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+    return col ~= 0 and vim.api.nvim_buf_get_text(0, line-1, 0, line-1, col, {})[1]:match("^%s*$") == nil
+  end
 
   cmp.setup({
     snippet = {
@@ -16,8 +59,8 @@
     },
     mapping = cmp.mapping.preset.insert({
       ["<Tab>"] = cmp.mapping(function(fallback)
-        if cmp.visible() then
-          cmp.select_next_item()
+        if cmp.visible() and has_words_before() then
+          cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
         elseif vim.fn["vsnip#available"](1) == 1 then
           feedkey("<Plug>(vsnip-expand-or-jump)", "")
         else
@@ -82,43 +125,6 @@
   })
 
   require("lsp-format").setup {}
-
-  require("copilot").setup({
-    panel = {
-      enabled = true,
-      auto_refresh = true,
-      keymap = {
-        jump_prev = "[[",
-        jump_next = "]]",
-        accept = "<cr>",
-        refresh = "gr",
-        open = "<m-cr>"
-      },
-      layout = {
-        position = "bottom", -- | top | left | right
-        ratio = 0.4
-      },
-    },
-    suggestion = {
-      enabled = true,
-      auto_trigger = false,
-      debounce = 75,
-      keymap = {
-        accept = "<m-l>",
-        accept_word = false,
-        accept_line = false,
-        next = "<m-]>",
-        prev = "<m-[>",
-        dismiss = "<c-]>",
-      },
-    },
-    filetypes = {
-      ["*"] = true,
-      yaml = true,
-    },
-    copilot_node_command = 'node', -- node.js version must be > 16.x
-    server_opts_overrides = {},
-  })
 
   -- Set up lspconfig.
   local capabilities = require('cmp_nvim_lsp').default_capabilities()
