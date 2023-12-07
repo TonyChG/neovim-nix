@@ -49,6 +49,8 @@ nnoremap <silent> <leader>gv :Gvdiffsplit<CR>
 nnoremap <silent> <leader>gb :Git_blame<CR>
 nnoremap <silent> <leader>gcc :Git commit<CR>
 nnoremap <silent> <leader>grm :GDelete!<CR>
+nnoremap <silent> <leader>gdh :diffget //2<CR>
+nnoremap <silent> <leader>gdl :diffget //3<CR>
 
 " fasd
 function! s:Go(pattern)
