@@ -83,6 +83,7 @@
       { name = 'vsnip' },
     }, {
       { name = 'buffer' },
+      { name = 'path' },
     })
   })
 
@@ -136,12 +137,13 @@
 
   require'lspconfig'.terraformls.setup {
     on_attach = require("lsp-format").on_attach,
+    root_pattern = {".terraform"},
   }
 
   require'lspconfig'.terraform_lsp.setup {
     capabilities = capabilities,
     on_attach = require("lsp-format").on_attach,
-    root_pattern = {".git", ".terraform"},
+    root_pattern = {".terraform"},
   }
 
   require'lspconfig'.dockerls.setup {
@@ -275,7 +277,10 @@
           null_ls.builtins.code_actions.impl,
           null_ls.builtins.code_actions.shellcheck,
           null_ls.builtins.completion.vsnip,
-          null_ls.builtins.diagnostics.dotenv_linter,
+          null_ls.builtins.diagnostics.dotenv_linter.with({
+            command = "dotenv-linter",
+            args = {"--skip", "UnorderedKey"},
+          }),
           null_ls.builtins.formatting.black,
           null_ls.builtins.diagnostics.typos,
       },
