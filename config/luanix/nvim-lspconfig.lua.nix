@@ -136,11 +136,6 @@
   }
 
   require'lspconfig'.terraformls.setup {
-    on_attach = require("lsp-format").on_attach,
-    root_pattern = {".terraform"},
-  }
-
-  require'lspconfig'.terraform_lsp.setup {
     capabilities = capabilities,
     on_attach = require("lsp-format").on_attach,
     root_pattern = {".terraform"},
