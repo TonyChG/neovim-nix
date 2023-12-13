@@ -84,6 +84,7 @@
     }, {
       { name = 'buffer' },
       { name = 'path' },
+      { name = 'emoji' },
     })
   })
 
