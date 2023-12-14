@@ -1,16 +1,5 @@
 { pkgs }:
 with pkgs; [
-  fd
-  gh
-  ghq
-  fzf
-  glab
-  fasd
-  sops
-  neovim-remote
-  chezmoi
-  ripgrep
-  xsel
   typos
   black
   stylua
@@ -27,7 +16,6 @@ with pkgs; [
   rnix-lsp
   nixpkgs-fmt
   # rust
-  cargo
   rust-analyzer
   rustfmt
   # packages with results in /lib/node_modules/.bin must come at the end
