@@ -19,7 +19,7 @@ nnoremap <silent> <leader>x <cmd>lua require('fzf-lua').quickfix()<CR>
 nnoremap <silent> <leader>gg <cmd>lua require('fzf-lua').live_grep()<CR>
 
 " telescope
-nnoremap <silent> <leader>b :Telescope buffers<CR>
+nnoremap <silent> <leader>bf :Telescope buffers<CR>
 nnoremap <silent> <leader>bb :Telescope builtin<CR>
 nnoremap <silent> <leader>o :Telescope oldfiles<CR>
 nnoremap <silent> <leader>m :lua require("telescope").extensions.ghq.list()<CR>

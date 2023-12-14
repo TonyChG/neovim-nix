@@ -139,7 +139,7 @@
   require'lspconfig'.terraformls.setup {
     capabilities = capabilities,
     on_attach = require("lsp-format").on_attach,
-    root_pattern = {".terraform"},
+    root_pattern = {".terraform", ".terraform.lock.hcl"},
   }
 
   require'lspconfig'.dockerls.setup {
