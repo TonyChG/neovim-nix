@@ -2,8 +2,6 @@
 with pkgs.vimPlugins; [
   # theme
   rose-pine
-  onedark-nvim
-  monokai-pro-nvim
   nvim-web-devicons
 
   # editing
