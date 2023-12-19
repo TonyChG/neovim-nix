@@ -18,6 +18,7 @@ with pkgs; [
   # rust
   rust-analyzer
   rustfmt
+  yamlfmt
   # packages with results in /lib/node_modules/.bin must come at the end
   pyright
   nodejs
