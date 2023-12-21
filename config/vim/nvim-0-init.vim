@@ -45,7 +45,7 @@ nnoremap <silent> <leader>gup :Git push -u origin HEAD<CR>
 nnoremap <silent> <leader>gP :Git push -f<CR>
 nnoremap <silent> <leader>gl :Git pull<CR>
 nnoremap <silent> <leader>gf :Git fetch --all --prune<CR>
-nnoremap <silent> <leader>gv :Gvdiffsplit<CR>
+nnoremap <silent> <leader>gv :Gvdiffsplit!<CR>
 nnoremap <silent> <leader>gb :Git_blame<CR>
 nnoremap <silent> <leader>gcc :Git commit<CR>
 nnoremap <silent> <leader>grm :GDelete!<CR>
