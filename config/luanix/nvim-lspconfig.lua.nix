@@ -161,9 +161,16 @@
     on_attach = require("lsp-format").on_attach,
   }
 
-  require'lspconfig'.rnix.setup {
+  require'lspconfig'.nil_ls.setup {
     capabilities = capabilities,
     on_attach = require("lsp-format").on_attach,
+    settings = {
+      ['nil'] = {
+        formatting = {
+          command = {"nixpkgs-fmt"},
+        },
+      },
+    },
   }
 
   require'lspconfig'.eslint.setup {

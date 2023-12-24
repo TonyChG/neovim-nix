@@ -13,7 +13,7 @@ with pkgs; [
   lua-language-server
   # nix
   alejandra
-  rnix-lsp
+  nil
   nixpkgs-fmt
   # rust
   rust-analyzer
