@@ -3,6 +3,7 @@ with pkgs.vimPlugins; [
   # theme
   rose-pine
   nvim-web-devicons
+  gruvbox
 
   # editing
   ssr-nvim
