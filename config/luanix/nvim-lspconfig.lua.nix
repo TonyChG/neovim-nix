@@ -244,17 +244,6 @@
     }
   }
 
-  local rt = require("rust-tools")
-
-  rt.setup({
-    server = {
-      on_attach = require("lsp-format").on_attach,
-      capabilities = capabilities,
-      cmd = { "direnv",  "exec", ".", "rust-analyzer" },
-      root_pattern = {"Cargo.toml", "Cargo.lock"},
-    },
-  })
-
   local null_ls = require("null-ls")
   local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
@@ -289,4 +278,24 @@
           null_ls.builtins.formatting.yamlfmt,
       },
   })
+
+  vim.g.rustaceanvim = {
+    -- Plugin configuration
+    tools = {},
+    -- LSP configuration
+    server = {
+      on_attach = function(client, bufnr)
+        -- you can also put keymaps in here
+        vim.lsp.inlay_hint(bufnr, true)
+        require("lsp-format").on_attach(client, bufnr)
+      end,
+      settings = {
+        -- rust-analyzer language server configuration
+        ["rust-analyzer"] = {},
+      },
+    },
+    -- DAP configuration
+    dap = {
+    },
+  }
 ''
