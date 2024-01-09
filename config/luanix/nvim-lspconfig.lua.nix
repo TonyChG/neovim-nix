@@ -81,6 +81,7 @@
       { name = 'copilot' },
       { name = 'nvim_lsp' },
       { name = 'vsnip' },
+      { name = 'crates' },
     }, {
       { name = 'buffer' },
       { name = 'path' },

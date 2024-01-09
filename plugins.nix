@@ -93,4 +93,5 @@ with pkgs.vimPlugins; [
 
   # rust
   rustaceanvim
+  crates-nvim
 ]
