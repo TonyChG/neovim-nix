@@ -31,6 +31,7 @@ with pkgs.vimPlugins; [
   sqlite-lua
   registers-nvim
   fzf-lua
+  which-key-nvim
 
   # syntax
   (nvim-treesitter.withPlugins (
