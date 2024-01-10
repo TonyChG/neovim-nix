@@ -36,21 +36,8 @@ nnoremap <silent> <leader>sp <cmd>lua require("spectre").open_file_search({selec
 nnoremap <silent> <leader>sr <cmd>Lspsaga rename<CR>
 vnoremap <silent> <leader>sw <esc><cmd>lua require("spectre").open_visual()<CR>
 
-" fugitive
-let g:fugitive_pty = 0
-nnoremap <silent> <leader>gs :Git<CR>
-nnoremap <silent> <leader>gcl :Gclog<CR>
-nnoremap <silent> <leader>gp :Git push<CR>
-nnoremap <silent> <leader>gup :Git push -u origin HEAD<CR>
-nnoremap <silent> <leader>gP :Git push -f<CR>
-nnoremap <silent> <leader>gl :Git pull<CR>
-nnoremap <silent> <leader>gf :Git fetch --all --prune<CR>
-nnoremap <silent> <leader>gv :Gvdiffsplit!<CR>
-nnoremap <silent> <leader>gb :Git_blame<CR>
-nnoremap <silent> <leader>gcc :Git commit<CR>
-nnoremap <silent> <leader>grm :GDelete!<CR>
-nnoremap <silent> <leader>gdh :diffget //2<CR>
-nnoremap <silent> <leader>gdl :diffget //3<CR>
+" neogit
+nnoremap <silent> <leader>gs :Neogit<CR>
 
 " fasd
 function! s:Go(pattern)
