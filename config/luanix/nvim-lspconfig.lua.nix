@@ -3,6 +3,8 @@
 ''  -- Set up nvim-cmp.
   local cmp = require'cmp'
 
+  require('crates').setup()
+
   require("copilot").setup({
     panel = {
       enabled = false,
