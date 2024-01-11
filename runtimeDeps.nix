@@ -16,9 +16,7 @@ with pkgs; [
   nil
   nixpkgs-fmt
   # rust
-  rustc
   rust-analyzer
-  clippy
   rustfmt
   yamlfmt
   # packages with results in /lib/node_modules/.bin must come at the end
@@ -29,7 +27,5 @@ with pkgs; [
   nodePackages.prettier
   nodePackages.typescript
   nodePackages."@volar/vue-language-server"
-  vscode-extensions.vadimcn.vscode-lldb
-  vscode-extensions.vadimcn.vscode-lldb.adapter
 ]
 

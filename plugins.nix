@@ -88,11 +88,7 @@ with pkgs.vimPlugins; [
   cmp-cmdline
   cmp-emoji
 
-  # debugging
-  nvim-dap
-  nvim-dap-ui
-
   # rust
-  rustaceanvim
   crates-nvim
+  rust-tools-nvim
 ]
