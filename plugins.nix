@@ -32,6 +32,7 @@ with pkgs.vimPlugins; [
   registers-nvim
   fzf-lua
   which-key-nvim
+  nvim-bqf
 
   # syntax
   (nvim-treesitter.withPlugins (
