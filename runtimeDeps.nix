@@ -19,6 +19,7 @@ with pkgs; [
   rust-analyzer
   rustfmt
   yamlfmt
+  clippy
   # packages with results in /lib/node_modules/.bin must come at the end
   pyright
   nodejs
