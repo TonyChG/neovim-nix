@@ -20,6 +20,8 @@ with pkgs; [
   rustfmt
   yamlfmt
   clippy
+  # php
+  phpactor
   # packages with results in /lib/node_modules/.bin must come at the end
   pyright
   nodejs
