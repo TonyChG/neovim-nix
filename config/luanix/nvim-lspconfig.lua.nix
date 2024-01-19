@@ -311,7 +311,7 @@
           }),
           null_ls.builtins.formatting.black,
           null_ls.builtins.diagnostics.typos,
-          null_ls.builtins.formatting.yamlfmt,
+          -- null_ls.builtins.formatting.yamlfmt,
       },
   })
 ''

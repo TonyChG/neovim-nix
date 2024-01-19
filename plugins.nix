@@ -11,6 +11,7 @@ with pkgs.vimPlugins; [
   indent-blankline-nvim-lua
   nvim-surround
   undotree
+  venn-nvim
 
   # git
   gitsigns-nvim
