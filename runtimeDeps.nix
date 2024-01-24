@@ -11,6 +11,7 @@ with pkgs; [
   vscode-langservers-extracted
   yaml-language-server
   lua-language-server
+  yamlfmt
   # nix
   alejandra
   nil
@@ -19,7 +20,6 @@ with pkgs; [
   cargo
   rust-analyzer
   rustfmt
-  yamlfmt
   clippy
   # php
   phpactor
@@ -32,4 +32,3 @@ with pkgs; [
   nodePackages.typescript
   nodePackages."@volar/vue-language-server"
 ]
-

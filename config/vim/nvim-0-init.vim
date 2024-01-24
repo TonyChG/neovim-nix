@@ -38,6 +38,7 @@ vnoremap <silent> <leader>sw <esc><cmd>lua require("spectre").open_visual()<CR>
 
 " neogit
 nnoremap <silent> <leader>gs :Neogit<CR>
+nnoremap <silent> <leader>gb :Git blame<CR>
 
 " fasd
 function! s:Go(pattern)
