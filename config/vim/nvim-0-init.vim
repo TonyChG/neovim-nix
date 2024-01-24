@@ -2,7 +2,7 @@ syntax on
 filetype plugin indent on
 
 let mapleader = " "
-colorscheme rose-pine
+colorscheme rose-pine-moon
 
 xnoremap <silent> <leader>p "_dP
 
