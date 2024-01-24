@@ -16,6 +16,7 @@ with pkgs; [
   nil
   nixpkgs-fmt
   # rust
+  cargo
   rust-analyzer
   rustfmt
   yamlfmt
