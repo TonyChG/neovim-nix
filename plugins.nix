@@ -14,7 +14,6 @@ with pkgs.vimPlugins; [
   venn-nvim
 
   # git
-  gitsigns-nvim
   diffview-nvim
   fugitive
   neogit
