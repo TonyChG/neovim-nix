@@ -298,19 +298,23 @@
       end,
       sources = {
           null_ls.builtins.formatting.stylua,
-          null_ls.builtins.diagnostics.eslint,
           null_ls.builtins.completion.spell,
           null_ls.builtins.code_actions.gitsigns,
           null_ls.builtins.code_actions.gomodifytags,
           null_ls.builtins.code_actions.impl,
           null_ls.builtins.code_actions.shellcheck,
           null_ls.builtins.completion.vsnip,
-          null_ls.builtins.diagnostics.dotenv_linter.with({
-            command = "dotenv-linter",
-            args = {"--skip", "UnorderedKey"},
-          }),
           null_ls.builtins.formatting.black,
+          null_ls.builtins.diagnostics.eslint,
+          null_ls.builtins.diagnostics.markdownlint,
           null_ls.builtins.diagnostics.typos,
+          null_ls.builtins.diagnostics.yamllint,
+          null_ls.builtins.diagnostics.sqlfluff.with({
+            extra_args = { "--dialect", "postgres" },
+          }),
+          null_ls.builtins.diagnostics.terraform_validate.with({
+            command = "opentofu",
+          }),
           -- null_ls.builtins.formatting.yamlfmt,
       },
   })
