@@ -7,6 +7,7 @@ with pkgs; [
   lazydocker
   terraform-ls
   gopls
+  opentofu
   docker-compose-language-service
   vscode-langservers-extracted
   yaml-language-server
