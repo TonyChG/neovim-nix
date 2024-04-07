@@ -2,7 +2,6 @@ syntax on
 filetype plugin indent on
 
 let mapleader = " "
-colorscheme catppuccin-mocha
 xnoremap <silent> <leader>p "_dP
 
 tnoremap <silent> <C-p> <C-\><C-n>
