@@ -2,6 +2,7 @@
 with pkgs.vimPlugins; [
   # theme
   rose-pine
+  catppuccin-nvim
   nvim-web-devicons
 
   # editing
