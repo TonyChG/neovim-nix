@@ -52,6 +52,23 @@
         "type": "github"
       }
     },
+    "neogit-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1712524054,
+        "narHash": "sha256-TTsnaCk2Y9AFHrokN/NrN7ekXZFXYJSMycAyzf+4B3E=",
+        "owner": "NeogitOrg",
+        "repo": "neogit",
+        "rev": "18938e2bda1ff9db8a1bdab573a05fbfbb136b9c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NeogitOrg",
+        "ref": "nightly",
+        "repo": "neogit",
+        "type": "github"
+      }
+    },
     "neovim": {
       "inputs": {
         "flake-utils": "flake-utils_2",
@@ -95,6 +112,7 @@
       "inputs": {
         "flake-utils": "flake-utils",
         "lsplens-src": "lsplens-src",
+        "neogit-src": "neogit-src",
         "neovim": "neovim",
         "nixpkgs": "nixpkgs",
         "telescope-ghq-src": "telescope-ghq-src",
