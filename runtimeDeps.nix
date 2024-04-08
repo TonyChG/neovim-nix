@@ -19,10 +19,10 @@ with pkgs; [
   nil
   nixpkgs-fmt
   # rust
-  cargo
-  rust-analyzer
+  # cargo
+  # rust-analyzer
   rustfmt
-  clippy
+  # clippy
   # php
   phpactor
   # packages with results in /lib/node_modules/.bin must come at the end
