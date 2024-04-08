@@ -266,6 +266,7 @@ require("copilot").setup({
       capabilities = capabilities,
       root_pattern = {"Cargo.toml", "Cargo.lock"},
       -- cmd = { "direnv", "exec", ".", "rust-analyzer" },
+      filetypes = { "rust" },
       settings = {
         ["rust-analyzer"] = {
           checkOnSave = {
