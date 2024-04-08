@@ -281,11 +281,6 @@ require("copilot").setup({
     capabilities = capabilities,
   })
 
-  require('lspconfig').postgres_lsp.setup({
-    capabilities = capabilities,
-    on_attach = require("lsp-format").on_attach,
-  })
-
   local null_ls = require("null-ls")
   local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
@@ -305,7 +300,6 @@ require("copilot").setup({
       sources = {
           null_ls.builtins.formatting.stylua,
           null_ls.builtins.completion.spell,
-          null_ls.builtins.code_actions.gitsigns,
           null_ls.builtins.code_actions.gomodifytags,
           null_ls.builtins.code_actions.impl,
           null_ls.builtins.code_actions.shellcheck,
