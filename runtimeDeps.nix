@@ -7,18 +7,17 @@ with pkgs; [
   lazydocker
   terraform-ls
   gopls
-  opentofu
   docker-compose-language-service
   vscode-langservers-extracted
   yaml-language-server
   yamllint
+  markdown-oxide
+  markdownlint-cli
   lua-language-server
   yamlfmt
-  # nix
   alejandra
   nil
   nixpkgs-fmt
-  # rust
   # cargo
   # rust-analyzer
   rustfmt
