@@ -1,32 +1,32 @@
 # vim: ft=lua
 { pkgs }:
 ''  -- Set up nvim-cmp.
-  local cmp = require'cmp'
+local cmp = require'cmp'
 
-  require('crates').setup()
+require('crates').setup()
 
-  require("copilot").setup({
-    panel = {
-      enabled = false,
-      auto_refresh = true,
-      keymap = {
-        jump_prev = "[[",
-        jump_next = "]]",
-        accept = "<cr>",
-        refresh = "gr",
-        open = "<m-cr>"
-      },
-      layout = {
-        position = "bottom", -- | top | left | right
-        ratio = 0.4
-      },
+require("copilot").setup({
+  panel = {
+    enabled = false,
+    auto_refresh = true,
+    keymap = {
+      jump_prev = "[[",
+      jump_next = "]]",
+      accept = "<cr>",
+      refresh = "gr",
+      open = "<m-cr>"
     },
-    suggestion = {
-      enabled = false,
-      auto_trigger = false,
-      debounce = 75,
-      keymap = {
-        accept = "<m-l>",
+    layout = {
+      position = "bottom", -- | top | left | right
+      ratio = 0.4
+    },
+  },
+  suggestion = {
+    enabled = false,
+    auto_trigger = false,
+    debounce = 75,
+    keymap = {
+      accept = "<m-l>",
         accept_word = false,
         accept_line = false,
         next = "<m-]>",
@@ -126,7 +126,7 @@
   require("trouble").setup({})
 
   require('treesitter-context').setup({
-    enable = true,
+    enable = false,
   })
 
   require("lsp-format").setup {}
@@ -166,7 +166,6 @@
 
   require'lspconfig'.nil_ls.setup {
     capabilities = capabilities,
-    on_attach = require("lsp-format").on_attach,
     settings = {
       ['nil'] = {
         formatting = {
@@ -247,9 +246,7 @@
     }
   }
 
-  local rt = require("rust-tools")
-
-  rt.setup({
+  vim.g.rustaceanvim = {
     tools = {
       runnables = {
         use_telescope = true,
@@ -262,10 +259,14 @@
       },
     },
     server = {
-      on_attach = require("lsp-format").on_attach,
+      on_attach = function(client, bufnr)
+        require("lsp-format").on_attach(client, bufnr)
+        vim.lsp.inlay_hint.enable(0, true)
+      end,
       capabilities = capabilities,
-      cmd = { "direnv",  "exec", ".", "rust-analyzer" },
       root_pattern = {"Cargo.toml", "Cargo.lock"},
+      -- cmd = { "direnv", "exec", ".", "rust-analyzer" },
+      filetypes = { "rust" },
       settings = {
         ["rust-analyzer"] = {
           checkOnSave = {
@@ -274,7 +275,7 @@
         },
       },
     },
-  })
+  }
 
   require('lspconfig').phpactor.setup({
     capabilities = capabilities,
@@ -322,5 +323,25 @@
           }),
           -- null_ls.builtins.formatting.yamlfmt,
       },
+  })
+
+  local SymbolKind = vim.lsp.protocol.SymbolKind
+
+  require'lsp-lens'.setup({
+    enable = true,
+    include_declaration = false,      -- Reference include declaration
+    sections = {                      -- Enable / Disable specific request, formatter example looks 'Format Requests'
+      definition = false,
+      references = true,
+      implements = true,
+      git_authors = true,
+    },
+    ignore_filetype = {
+      "prisma",
+    },
+    -- Target Symbol Kinds to show lens information
+    target_symbol_kinds = { SymbolKind.Function, SymbolKind.Method, SymbolKind.Interface },
+    -- Symbol Kinds that may have target symbol kinds as children
+    wrapper_symbol_kinds = { SymbolKind.Class, SymbolKind.Struct },
   })
 ''

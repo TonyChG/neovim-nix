@@ -13,6 +13,7 @@ with pkgs.vimPlugins; [
   nvim-surround
   undotree
   venn-nvim
+  markdown-preview-nvim
 
   # git
   diffview-nvim
@@ -93,5 +94,5 @@ with pkgs.vimPlugins; [
 
   # rust
   crates-nvim
-  rust-tools-nvim
+  rustaceanvim
 ]

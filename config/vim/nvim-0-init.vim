@@ -5,10 +5,10 @@ let mapleader = " "
 xnoremap <silent> <leader>p "_dP
 
 tnoremap <silent> <C-p> <C-\><C-n>
-nnoremap <silent> <C-d> <C-d>zz
-nnoremap <silent> <C-u> <C-u>zz
-nnoremap <silent> <C-f> <C-f>zz
-nnoremap <silent> <C-b> <C-b>zz
+" nnoremap <silent> <C-d> <C-d>zz
+" nnoremap <silent> <C-u> <C-u>zz
+" nnoremap <silent> <C-f> <C-f>zz
+" nnoremap <silent> <C-b> <C-b>zz
 nnoremap <silent> <leader>t :NvimTreeToggle<CR>
 
 " fzf
@@ -55,3 +55,5 @@ command! Gc call s:GoCurrent()
 
 set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
 set grepformat=%f:%l:%c:%m
+
+autocmd FileType sql setlocal tabstop=4 shiftwidth=4

@@ -21,6 +21,11 @@
       flake = false;
     };
 
+    neogit-src = {
+      url = "github:NeogitOrg/neogit/nightly";
+      flake = false;
+    };
+
     lsplens-src = {
       url = "github:VidocqH/lsp-lens.nvim";
       flake = false;
@@ -50,6 +55,11 @@
 
             lsplens = import ./packages/vimPlugins/lsplens.nix {
               src = inputs.lsplens-src;
+              pkgs = prev;
+            };
+
+            neogit = import ./packages/vimPlugins/neogit.nix {
+              src = inputs.neogit-src;
               pkgs = prev;
             };
           };
