@@ -55,3 +55,5 @@ command! Gc call s:GoCurrent()
 
 set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
 set grepformat=%f:%l:%c:%m
+
+autocmd FileType sql setlocal tabstop=4 shiftwidth=4
