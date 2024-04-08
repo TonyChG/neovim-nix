@@ -281,6 +281,11 @@ require("copilot").setup({
     capabilities = capabilities,
   })
 
+  require'lspconfig'.markdown_oxide.setup{
+    capabilities = capabilities,
+    on_attach = require("lsp-format").on_attach,
+  }
+
   local null_ls = require("null-ls")
   local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
