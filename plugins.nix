@@ -14,6 +14,7 @@ with pkgs.vimPlugins; [
   undotree
   venn-nvim
   markdown-preview-nvim
+  silicon-nvim
 
   # git
   diffview-nvim
