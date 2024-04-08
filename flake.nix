@@ -31,6 +31,11 @@
       flake = false;
     };
 
+    silicon-src = {
+      url = "github:michaelrommel/nvim-silicon";
+      flake = false;
+    };
+
     flake-utils = {
       url = "github:numtide/flake-utils";
     };
@@ -60,6 +65,11 @@
 
             neogit = import ./packages/vimPlugins/neogit.nix {
               src = inputs.neogit-src;
+              pkgs = prev;
+            };
+
+            silicon-nvim = import ./packages/vimPlugins/silicon-nvim.nix {
+              src = inputs.silicon-src;
               pkgs = prev;
             };
           };

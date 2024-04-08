@@ -1,5 +1,6 @@
 { pkgs }:
 with pkgs; [
+  silicon
   typos
   black
   stylua
@@ -18,9 +19,9 @@ with pkgs; [
   alejandra
   nil
   nixpkgs-fmt
+  rustfmt
   # cargo
   # rust-analyzer
-  rustfmt
   # clippy
   # php
   phpactor
