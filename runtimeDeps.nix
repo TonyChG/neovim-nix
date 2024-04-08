@@ -11,6 +11,7 @@ with pkgs; [
   docker-compose-language-service
   vscode-langservers-extracted
   yaml-language-server
+  yamllint
   lua-language-server
   yamlfmt
   # nix
