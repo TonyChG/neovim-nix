@@ -166,7 +166,6 @@ require("copilot").setup({
 
   require'lspconfig'.nil_ls.setup {
     capabilities = capabilities,
-    on_attach = require("lsp-format").on_attach,
     settings = {
       ['nil'] = {
         formatting = {
