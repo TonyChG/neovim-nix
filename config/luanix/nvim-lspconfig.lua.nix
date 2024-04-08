@@ -126,7 +126,7 @@ require("copilot").setup({
   require("trouble").setup({})
 
   require('treesitter-context').setup({
-    enable = true,
+    enable = false,
   })
 
   require("lsp-format").setup {}
@@ -266,6 +266,7 @@ require("copilot").setup({
       end,
       capabilities = capabilities,
       root_pattern = {"Cargo.toml", "Cargo.lock"},
+      cmd = { "direnv", "exec", ".", "rust-analyzer" },
       settings = {
         ["rust-analyzer"] = {
           checkOnSave = {
