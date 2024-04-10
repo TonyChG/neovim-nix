@@ -15,11 +15,13 @@ with pkgs.vimPlugins; [
   venn-nvim
   markdown-preview-nvim
   silicon-nvim
+  conform-nvim
 
   # git
   diffview-nvim
   fugitive
   neogit
+  gitsigns-nvim
 
   # ui
   glow-nvim

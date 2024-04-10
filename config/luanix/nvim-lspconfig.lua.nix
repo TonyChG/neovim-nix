@@ -129,25 +129,25 @@ require("copilot").setup({
     enable = false,
   })
 
-  require("lsp-format").setup {}
+  -- require("lsp-format").setup {}
 
   -- Set up lspconfig.
   local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
   require'lspconfig'.pyright.setup {
     capabilities = capabilities,
-    on_attach = require("lsp-format").on_attach,
+    -- on_attach = require("lsp-format").on_attach,
   }
 
   require'lspconfig'.terraformls.setup {
     capabilities = capabilities,
-    on_attach = require("lsp-format").on_attach,
+    -- on_attach = require("lsp-format").on_attach,
     root_dir = require("lspconfig.util").root_pattern(".git")
   }
 
   require'lspconfig'.dockerls.setup {
     capabilities = capabilities,
-    on_attach = require("lsp-format").on_attach,
+    -- on_attach = require("lsp-format").on_attach,
     settings = {
       docker = {
         languageserver = {
@@ -161,7 +161,7 @@ require("copilot").setup({
 
   require'lspconfig'.gopls.setup {
     capabilities = capabilities,
-    on_attach = require("lsp-format").on_attach,
+    -- on_attach = require("lsp-format").on_attach,
   }
 
   require'lspconfig'.nil_ls.setup {
@@ -177,12 +177,12 @@ require("copilot").setup({
 
   require'lspconfig'.eslint.setup {
     capabilities = capabilities,
-    on_attach = require("lsp-format").on_attach,
+    -- on_attach = require("lsp-format").on_attach,
   }
 
   require'lspconfig'.lua_ls.setup{
     capabilities = capabilities,
-    on_attach = require("lsp-format").on_attach,
+    -- on_attach = require("lsp-format").on_attach,
   }
 
   require'lspconfig'.yamlls.setup {
@@ -209,7 +209,7 @@ require("copilot").setup({
     },
   }
 
-  require("lsp-format").setup {
+  --[[ require("lsp-format").setup {
     typescript = {
       tab_width = function()
         return vim.opt.shiftwidth:get()
@@ -217,7 +217,7 @@ require("copilot").setup({
     },
     javascript = { tab_width = 2 },
     vue = { tab_width = 2 },
-  }
+  } ]]
 
   local prettier = {
     formatCommand = [[prettier --stdin-filepath ''${INPUT} ''${--tab-width:tab_width}]],
@@ -231,7 +231,7 @@ require("copilot").setup({
       'vue',
     },
     capabilities = capabilities,
-    on_attach = require("lsp-format").on_attach,
+    -- on_attach = require("lsp-format").on_attach,
     init_options = {
       typescript = {
         tsdk = "${pkgs.nodePackages.typescript}/lib/node_modules/typescript/lib"
@@ -260,7 +260,7 @@ require("copilot").setup({
     },
     server = {
       on_attach = function(client, bufnr)
-        require("lsp-format").on_attach(client, bufnr)
+        -- require("lsp-format").on_attach(client, bufnr)
         vim.lsp.inlay_hint.enable(0, true)
       end,
       capabilities = capabilities,
@@ -283,7 +283,7 @@ require("copilot").setup({
 
   require'lspconfig'.markdown_oxide.setup{
     capabilities = capabilities,
-    on_attach = require("lsp-format").on_attach,
+    -- on_attach = require("lsp-format").on_attach,
   }
 
   local null_ls = require("null-ls")
