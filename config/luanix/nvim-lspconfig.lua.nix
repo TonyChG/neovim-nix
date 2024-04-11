@@ -260,8 +260,8 @@ require("copilot").setup({
     },
     server = {
       on_attach = function(client, bufnr)
-        -- require("lsp-format").on_attach(client, bufnr)
-        vim.lsp.inlay_hint.enable(0, true)
+        require("lsp-format").on_attach(client, bufnr)
+        -- vim.lsp.inlay_hint.enable(0, true)
       end,
       capabilities = capabilities,
       root_pattern = {"Cargo.toml", "Cargo.lock"},
