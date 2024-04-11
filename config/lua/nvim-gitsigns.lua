@@ -1,4 +1,4 @@
-require("gitsigns").setup({
+--[[ require("gitsigns").setup({
   signs = {
     add = { text = "│" },
     change = { text = "│" },
@@ -21,4 +21,4 @@ require("gitsigns").setup({
     map("n", "<leader>ph", gs.preview_hunk, opts "Preview Hunk")
     map("n", "<leader>gb", gs.blame_line, opts "Blame Line")
   end,
-})
+}) ]]
