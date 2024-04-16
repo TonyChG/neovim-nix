@@ -98,4 +98,9 @@ with pkgs.vimPlugins; [
   # rust
   crates-nvim
   rustaceanvim
+
+  # Debug
+  nvim-dap
+  nvim-dap-ui
+  nvim-dap-virtual-text
 ]

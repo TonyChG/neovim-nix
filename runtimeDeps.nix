@@ -10,6 +10,7 @@ with pkgs; [
   gopls
   docker-compose-language-service
   vscode-langservers-extracted
+  vscode-extensions.vadimcn.vscode-lldb.adapter
   yaml-language-server
   yamllint
   markdown-oxide
@@ -20,7 +21,7 @@ with pkgs; [
   nil
   nixpkgs-fmt
   rustfmt
-  # cargo
+  cargo
   # rust-analyzer
   # clippy
   # php
