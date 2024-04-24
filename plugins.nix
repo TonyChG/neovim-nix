@@ -94,6 +94,7 @@ with pkgs.vimPlugins; [
   cmp-vsnip
   cmp-cmdline
   cmp-emoji
+  lsp_lines-nvim
 
   # rust
   crates-nvim
