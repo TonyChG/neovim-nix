@@ -20,8 +20,8 @@ with pkgs; [
   nil
   nixpkgs-fmt
   rustfmt
-  # cargo
-  # rust-analyzer
+  cargo
+  rust-analyzer
   # clippy
   # php
   phpactor
