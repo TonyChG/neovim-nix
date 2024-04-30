@@ -16,6 +16,7 @@ with pkgs.vimPlugins; [
   markdown-preview-nvim
   silicon-nvim
   conform-nvim
+  nvim-sops
 
   # git
   diffview-nvim

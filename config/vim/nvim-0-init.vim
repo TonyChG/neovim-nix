@@ -9,34 +9,6 @@ tnoremap <silent> <C-p> <C-\><C-n>
 " nnoremap <silent> <C-u> <C-u>zz
 " nnoremap <silent> <C-f> <C-f>zz
 " nnoremap <silent> <C-b> <C-b>zz
-nnoremap <silent> <leader>t :NvimTreeToggle<CR>
-
-" fzf
-nnoremap <silent> <leader>f <cmd>lua require('fzf-lua').files()<CR>
-nnoremap <silent> <leader>x <cmd>lua require('fzf-lua').quickfix()<CR>
-nnoremap <silent> <leader>gg <cmd>lua require('fzf-lua').live_grep()<CR>
-
-" telescope
-nnoremap <silent> <leader>bf :Telescope buffers<CR>
-nnoremap <silent> <leader>bb :Telescope builtin<CR>
-nnoremap <silent> <leader>o :Telescope oldfiles<CR>
-nnoremap <silent> <leader>m :lua require("telescope").extensions.ghq.list()<CR>
-
-" toggleterm
-nnoremap <silent> <leader>cc :ToggleTerm direction=tab<CR>
-nnoremap <silent> <leader>* 2:ToggleTerm direction=vertical<CR>
-nnoremap <silent> <leader>v 2:ToggleTerm direction=horizontal<CR>
-
-" spectre
-nnoremap <silent> <leader>S <cmd>lua require("spectre").toggle()<CR>
-nnoremap <silent> <leader>sw <cmd>lua require("spectre").open_visual({select_word=true})<CR>
-nnoremap <silent> <leader>sp <cmd>lua require("spectre").open_file_search({select_word=true})<CR>
-nnoremap <silent> <leader>sr <cmd>Lspsaga rename<CR>
-vnoremap <silent> <leader>sw <esc><cmd>lua require("spectre").open_visual()<CR>
-
-" neogit
-nnoremap <silent> <leader>gs :Neogit<CR>
-nnoremap <silent> <leader>gb :Git blame<CR>
 
 " fasd
 function! s:Go(pattern)
