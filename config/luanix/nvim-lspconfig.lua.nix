@@ -141,7 +141,7 @@ require("copilot").setup({
 
   require'lspconfig'.terraformls.setup {
     capabilities = capabilities,
-    -- on_attach = require("lsp-format").on_attach,
+    on_attach = require("lsp-format").on_attach,
     root_dir = require("lspconfig.util").root_pattern(".git")
   }
 
@@ -318,7 +318,7 @@ require("copilot").setup({
             extra_args = { "--dialect", "postgres" },
           }),
           null_ls.builtins.diagnostics.terraform_validate.with({
-            command = "opentofu",
+            command = "tofu",
           }),
           -- null_ls.builtins.formatting.yamlfmt,
       },
