@@ -19,9 +19,6 @@ with pkgs; [
   alejandra
   nil
   nixpkgs-fmt
-  rustfmt
-  cargo
-  rust-analyzer
   # clippy
   # php
   phpactor
